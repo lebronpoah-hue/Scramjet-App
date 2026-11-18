@@ -26,10 +26,6 @@ const fastify = Fastify({
 			.on("request", (req, res) => {
 				res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
 				res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
-				res.setHeader(
-					"Content-Security-Policy",
-					"frame-ancestors 'self' https://script.google.com https://*.googleusercontent.com"
-				);
 				handler(req, res);
 			})
 			.on("upgrade", (req, socket, head) => {
