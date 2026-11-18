@@ -1009,9 +1009,9 @@
           <select
             id="searchEngine"
             style="padding: 0.6rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: 0.5rem; color: var(--fg); font-size: 0.9rem; outline: none;">
-            <option value="duckduckgo" style="background: var(--bg);" selected>DuckDuckGo</option>
-            <option value="google" style="background: var(--bg);">Google</option>
+            <option value="google" style="background: var(--bg);" selected>Google</option>
             <option value="bing" style="background: var(--bg);">Bing</option>
+            <option value="duckduckgo" style="background: var(--bg);">DuckDuckGo</option>
           </select>
         </div>
 
@@ -7441,7 +7441,7 @@ window.gtag("config", firebaseConfig.measurementId, {
     <button class="tb-btn" id="tb-back" type="button" aria-label="Back" title="Back" disabled>&#8592;</button>
     <button class="tb-btn" id="tb-fwd" type="button" aria-label="Forward" title="Forward" disabled>&#8594;</button>
     <button class="tb-btn" id="tb-reload" type="button" aria-label="Refresh" title="Refresh" disabled>&#8635;</button>
-    <select id="tb-engine" aria-label="Search engine"><option value="duckduckgo">DuckDuckGo</option><option value="google">Google</option><option value="bing">Bing</option></select>
+    <select id="tb-engine" aria-label="Search engine"><option value="google">Google</option><option value="bing">Bing</option><option value="duckduckgo">DuckDuckGo</option></select>
     <form id="tb-form" autocomplete="off"><input id="tb-url" type="text" placeholder="Search or enter address" spellcheck="false" autocapitalize="off"></form>
   </div>
 </div>
@@ -7494,7 +7494,7 @@ window.gtag("config", firebaseConfig.measurementId, {
     bing: "https://www.bing.com/search?q=",
   };
   const engineSel = $("tb-engine");
-  const getEngine = () => { let e = null; try { e = localStorage.getItem("study_engine"); } catch (x) {} return ENGINES[e] ? e : "duckduckgo"; };
+  const getEngine = () => { let e = null; try { e = localStorage.getItem("study_engine"); } catch (x) {} return ENGINES[e] ? e : "google"; };
   engineSel.value = getEngine();
   engineSel.addEventListener("change", () => {
     try { localStorage.setItem("study_engine", engineSel.value); } catch (x) {}
