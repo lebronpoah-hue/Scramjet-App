@@ -7008,6 +7008,55 @@ window.gtag("config", firebaseConfig.measurementId, {
 
     let currentGameFrame = null;
 
+    // ---- Game saves ----
+    // Games run in a sandbox with no storage of their own, so each game gets a localStorage
+    // shim whose data is loaded from, and saved back to, this page's localStorage (per game).
+    let currentGameId = null;
+    function buildStorageShim(gameId) {
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem('study_save_' + gameId) || '{}') || {}; } catch (e) { saved = {}; }
+      const init = JSON.stringify(saved).replace(/</g, '\\u003c');
+      const gid = JSON.stringify(gameId);
+      return '(function(){' +
+        'var data=' + init + ',gid=' + gid + ',timer=null;' +
+        'function flush(){try{parent.postMessage({type:"study-save",game:gid,data:data},"*")}catch(e){}}' +
+        'function sync(){clearTimeout(timer);timer=setTimeout(flush,250)}' +
+        'var st={' +
+          'getItem:function(k){k=String(k);return Object.prototype.hasOwnProperty.call(data,k)?data[k]:null},' +
+          'setItem:function(k,v){data[String(k)]=String(v);sync()},' +
+          'removeItem:function(k){delete data[String(k)];sync()},' +
+          'clear:function(){data={};sync()},' +
+          'key:function(i){var ks=Object.keys(data);return i<ks.length?ks[i]:null}' +
+        '};' +
+        'var store=new Proxy(st,{' +
+          'get:function(t,p){if(p==="length")return Object.keys(data).length;if(p in t)return t[p];return t.getItem(p)===null?undefined:t.getItem(p)},' +
+          'set:function(t,p,v){t.setItem(p,v);return true},' +
+          'deleteProperty:function(t,p){t.removeItem(p);return true},' +
+          'has:function(t,p){return p in t||Object.prototype.hasOwnProperty.call(data,String(p))},' +
+          'ownKeys:function(){return Object.keys(data)},' +
+          'getOwnPropertyDescriptor:function(t,p){return Object.prototype.hasOwnProperty.call(data,String(p))?{value:data[p],enumerable:true,configurable:true,writable:true}:undefined}' +
+        '});' +
+        'var mem={},sess=new Proxy({getItem:function(k){k=String(k);return k in mem?mem[k]:null},setItem:function(k,v){mem[String(k)]=String(v)},removeItem:function(k){delete mem[String(k)]},clear:function(){mem={}},key:function(i){return Object.keys(mem)[i]||null}},{});' +
+        'try{Object.defineProperty(window,"localStorage",{value:store,configurable:true})}catch(e){}' +
+        'try{Object.defineProperty(window,"sessionStorage",{value:sess,configurable:true})}catch(e){}' +
+        'window.addEventListener("pagehide",flush);window.addEventListener("beforeunload",flush);' +
+        'document.addEventListener("visibilitychange",function(){if(document.hidden)flush()});' +
+      '})();';
+    }
+    window.addEventListener('message', (e) => {
+      const m = e.data;
+      if (!m || m.type !== 'study-save' || typeof m.game !== 'string' || !/^[\w-]+$/.test(m.game)) return;
+      if (!currentGameFrame || e.source !== currentGameFrame.contentWindow || m.game !== currentGameId) return;
+      if (!m.data || typeof m.data !== 'object') return;
+      try {
+        const out = {};
+        for (const k of Object.keys(m.data)) if (typeof m.data[k] === 'string') out[k] = m.data[k];
+        const json = JSON.stringify(out);
+        if (json.length > 4000000) return;
+        localStorage.setItem('study_save_' + m.game, json);
+      } catch (err) {}
+    });
+
     function openGame(gameId, writeHistory = true) {
       const template = document.getElementById(gameId + '-code');
 
@@ -7037,6 +7086,8 @@ window.gtag("config", firebaseConfig.measurementId, {
       gameFrame.setAttribute('sandbox', sandboxPermissions.join(' '));
       gameFrame.setAttribute('allow', 'fullscreen');
 
+      currentGameId = gameId;
+      const storageShim = buildStorageShim(gameId);
       gameFrame.srcdoc =
         '<!DOCTYPE html>' +
         '<html lang="en">' +
@@ -7071,6 +7122,7 @@ window.gtag("config", firebaseConfig.measurementId, {
         'min-height: 300px;' +
         '}' +
         '</style>' +
+        '<script>' + storageShim + '<' + '/script>' +
         '</head>' +
         '<body>' +
         template.innerHTML +
