@@ -7467,6 +7467,7 @@ window.gtag("config", firebaseConfig.measurementId, {
       await navigator.serviceWorker.ready;
       const conn = new BareMux.BareMuxConnection("/baremux/worker.js");
       await conn.setTransport("/libcurl/index.mjs", [{ wisp: WISP_URL }]);
+      await new Promise((r) => setTimeout(r, 1500));   // let libcurl finish loading its wasm
       return sj;
     })();
     engine.catch(() => { engine = null; });
@@ -7524,6 +7525,15 @@ window.gtag("config", firebaseConfig.measurementId, {
   }
 
   function onLoad(t) {
+    try {
+      const txt = (t.iframe.contentDocument && t.iframe.contentDocument.body && t.iframe.contentDocument.body.innerText) || "";
+      if (/wasm not loaded yet/i.test(txt) && (t.retries || 0) < 6) {
+        t.retries = (t.retries || 0) + 1;
+        setTimeout(() => go(t, t.hist[t.idx]), 800 * t.retries);
+        return;
+      }
+    } catch (e) {}
+    t.retries = 0;
     const actual = currentUrl(t);
     if (!actual) return;                       // blank/initial frame load
     if (actual !== t.hist[t.idx]) {
@@ -7558,6 +7568,7 @@ window.gtag("config", firebaseConfig.measurementId, {
     const url = normalize(input);
     if (!url) return;
     if (t.kind === "home") { t.kind = "web"; t.title = hostOf(url); createPane(t); }
+    t.retries = 0;
     pushHist(t, url);
     activate(t);
     go(t, url);
