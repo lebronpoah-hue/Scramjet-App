@@ -1,1 +1,375 @@
 lebron da goat
+
+
+{
+	"type": "npm",
+	"name": "@mercuryworkshop/scramjet",
+	"version": "1.1.0",
+	"default": null,
+	"files": [
+		{
+			"type": "directory",
+			"name": "lib",
+			"files": [
+				{
+					"type": "file",
+					"name": "index.cjs",
+					"hash": "tWGItuRRWwXv6x3SKj43XivxvT9qygofs9zF+YHpT/k=",
+					"size": 151
+				},
+				{
+					"type": "file",
+					"name": "index.d.ts",
+					"hash": "2MLEfrl9WYSyyChRNlaCxYT6W1P7bH0loMr6pE7vJT4=",
+					"size": 138
+				},
+				{
+					"type": "file",
+					"name": "noop.js",
+					"hash": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+					"size": 0
+				}
+			]
+		},
+		{
+			"type": "directory",
+			"name": "dist",
+			"files": [
+				{
+					"type": "directory",
+					"name": "types",
+					"files": [
+						{
+							"type": "directory",
+							"name": "controller",
+							"files": [
+								{
+									"type": "file",
+									"name": "controller.d.ts",
+									"hash": "6O6XA2I1GBy//robbIi3CKrg09edXaMkCPvqQouoM4o=",
+									"size": 806
+								},
+								{
+									"type": "file",
+									"name": "frame.d.ts",
+									"hash": "i2T016CVc30/OY/T+RzSsk9gRsHfLZNsD6U7mFsR7Ak=",
+									"size": 3279
+								},
+								{
+									"type": "file",
+									"name": "index.d.ts",
+									"hash": "AI/RYD4b9Mmmg/EgEOwBvYwxs8RbrN9JzTIB/7a5A+o=",
+									"size": 55
+								}
+							]
+						},
+						{
+							"type": "directory",
+							"name": "client",
+							"files": [
+								{
+									"type": "directory",
+									"name": "shared",
+									"files": [
+										{
+											"type": "file",
+											"name": "eval.d.ts",
+											"hash": "k/PYd9D97bkI89rsoP9mn2wDlRKRba8qL3B3nNCVxh8=",
+											"size": 202
+										},
+										{
+											"type": "file",
+											"name": "sourcemaps.d.ts",
+											"hash": "632ZhekdO4PX2E/q6g26zD5O6yFLqVzvdWjdv4JpaJ8=",
+											"size": 468
+										},
+										{
+											"type": "file",
+											"name": "wrap.d.ts",
+											"hash": "PP3pojs250f/YnjLlDlDWFItAe2032+f64TdoMlGbiI=",
+											"size": 286
+										}
+									]
+								},
+								{
+									"type": "file",
+									"name": "client.d.ts",
+									"hash": "BYh9+6BqCiZXhx2rI8hVBPUPVS5oTv6EWhAzWMy4nNw=",
+									"size": 2495
+								},
+								{
+									"type": "file",
+									"name": "entry.d.ts",
+									"hash": "f4Rsi4eas1nJsJSh4Smh2Q2tcCOwbB7GPU4chNn/nSI=",
+									"size": 353
+								},
+								{
+									"type": "file",
+									"name": "events.d.ts",
+									"hash": "6zH4rFLTveanRBWOaJUlteJFLTwyjHqv2d+VkDXV9DM=",
+									"size": 1800
+								},
+								{
+									"type": "file",
+									"name": "helpers.d.ts",
+									"hash": "spkRBjTB8sSM1kqV5k0mGR0Rn6Uevg8iN/zqxtLeAjk=",
+									"size": 111
+								},
+								{
+									"type": "file",
+									"name": "index.d.ts",
+									"hash": "xJX+ssnJJkIRTpk+yaLGc/gy7/3zh3Tzskeup5mQ4fM=",
+									"size": 214
+								},
+								{
+									"type": "file",
+									"name": "location.d.ts",
+									"hash": "zZa7La+KWz3c29N5Ugyz0ThpMBUzyoKfjDyyqp+H65I=",
+									"size": 141
+								},
+								{
+									"type": "file",
+									"name": "singletonbox.d.ts",
+									"hash": "6kvmoZHA0ceE9ZheGy6BVMcSafZHWhezB7iHnNUoNjI=",
+									"size": 465
+								},
+								{
+									"type": "file",
+									"name": "swruntime.d.ts",
+									"hash": "QPFL3PhLb+iW4xqmW5gL1pHf3QV8N73uV+GPcCRcQcE=",
+									"size": 1110
+								}
+							]
+						},
+						{
+							"type": "directory",
+							"name": "shared",
+							"files": [
+								{
+									"type": "directory",
+									"name": "rewriters",
+									"files": [
+										{
+											"type": "file",
+											"name": "css.d.ts",
+											"hash": "cQooLvbyWPOG+OSrisXnvYseCeEX+5+DkMCXhzNtn2Q=",
+											"size": 164
+										},
+										{
+											"type": "file",
+											"name": "headers.d.ts",
+											"hash": "qS89nHneKKaEEf1lhBu+Qp1Pc+6qxBFqk+PzJxuqZOo=",
+											"size": 756
+										},
+										{
+											"type": "file",
+											"name": "html.d.ts",
+											"hash": "SUdR8faKRXY5DIPkMws/7gnamgFkCAXfkLeJCH1qeqs=",
+											"size": 436
+										},
+										{
+											"type": "file",
+											"name": "index.d.ts",
+											"hash": "M2cbFk3xuVVfnpLfeHzhNE4To+apCKRnZc0RLUI4wgM=",
+											"size": 169
+										},
+										{
+											"type": "file",
+											"name": "js.d.ts",
+											"hash": "QV29ERqa4w/Mq7Y+1dH+6lpHJRbP/yAFyboedf8S3Jk=",
+											"size": 435
+										},
+										{
+											"type": "file",
+											"name": "url.d.ts",
+											"hash": "5C6vFW/Fo+U+EzE68XEHHwQedMws2SvyWY8Dzoojijo=",
+											"size": 392
+										},
+										{
+											"type": "file",
+											"name": "wasm.d.ts",
+											"hash": "aw8sbewIVmBJOwgGcODu3vwb91onIWg1uV591ZVp3fs=",
+											"size": 394
+										},
+										{
+											"type": "file",
+											"name": "worker.d.ts",
+											"hash": "J734WXliP49oMBJ10oXsgyo4lkL1QJavNBYrRQl7DxQ=",
+											"size": 148
+										}
+									]
+								},
+								{
+									"type": "directory",
+									"name": "security",
+									"files": [
+										{
+											"type": "file",
+											"name": "forceReferrer.d.ts",
+											"hash": "Helzk3f6y+xkvLsyRD1zSCHi1VXJdnkeEdonmTinF58=",
+											"size": 1941
+										},
+										{
+											"type": "file",
+											"name": "index.d.ts",
+											"hash": "GgFi+reihOB7DW/UNcPFzMVEwky2SE83lN6Try/SBKU=",
+											"size": 62
+										},
+										{
+											"type": "file",
+											"name": "siteTests.d.ts",
+											"hash": "aJamB4ElL17vRvibjZtXct/VrtzP3jXq85Ci++uhGMo=",
+											"size": 1460
+										}
+									]
+								},
+								{
+									"type": "file",
+									"name": "cookie.d.ts",
+									"hash": "ozMR/gBi04OfXHpzCE7DhY3TFOp5biVRsO+Fpg3KA5k=",
+									"size": 447
+								},
+								{
+									"type": "file",
+									"name": "headers.d.ts",
+									"hash": "k7g9FJusn44dha3wzkfevfMvrvVMEgJV/uXDY14JH9k=",
+									"size": 97
+								},
+								{
+									"type": "file",
+									"name": "htmlRules.d.ts",
+									"hash": "dChhJJQCM+LM87WKpX2iVewPmlnbGadWg1p07XdEOfY=",
+									"size": 277
+								},
+								{
+									"type": "file",
+									"name": "index.d.ts",
+									"hash": "kQyGsof0uFl1qKcr8QR4gkGM7JTId2eD2tCJ6QkkIB0=",
+									"size": 553
+								}
+							]
+						},
+						{
+							"type": "directory",
+							"name": "worker",
+							"files": [
+								{
+									"type": "file",
+									"name": "error.d.ts",
+									"hash": "BXhEitcLKxczu7urb6+sATjqCQp66/3z0JktfAZR+IY=",
+									"size": 163
+								},
+								{
+									"type": "file",
+									"name": "fakesw.d.ts",
+									"hash": "LTdq26ap8oWdrWyKUHnf7M5gWc2vWEOIvu2rhHG+nbY=",
+									"size": 437
+								},
+								{
+									"type": "file",
+									"name": "fetch.d.ts",
+									"hash": "QCrk3gK75TJcD3yAoxemsvUIUZYTotYibjEQs386e2E=",
+									"size": 1189
+								},
+								{
+									"type": "file",
+									"name": "index.d.ts",
+									"hash": "tFyYeOLUDMmSdzOoFC2doU3Dece7HsTbLBZP9A1VQZo=",
+									"size": 4658
+								}
+							]
+						},
+						{
+							"type": "file",
+							"name": "entry.d.ts",
+							"hash": "eaM/Ti6p7Q8XAt6357dTSSbCH76WbYtTaQ6iDWpicpg=",
+							"size": 4247
+						},
+						{
+							"type": "file",
+							"name": "index.d.ts",
+							"hash": "K3pBBja1AsLwDgsXoBvG6e5I2LlLxQICyQGS8Ybevf0=",
+							"size": 206
+						},
+						{
+							"type": "file",
+							"name": "symbols.d.ts",
+							"hash": "RZ+Zo8mNQOJV/2HIHQGQuDLyhKp5rUdo1bC16RGCCoE=",
+							"size": 244
+						},
+						{
+							"type": "file",
+							"name": "types.d.ts",
+							"hash": "2NuQVgraUI4r8R8YwdzO67uRHTetrojNPMrnmROwJ40=",
+							"size": 3620
+						}
+					]
+				},
+				{
+					"type": "file",
+					"name": "scramjet.all.js",
+					"hash": "fY3kllFnontXO/cCIZDPtoyUhdYixaCC4gehCSFY1SA=",
+					"size": 180319
+				},
+				{
+					"type": "file",
+					"name": "scramjet.all.js.map",
+					"hash": "UxmOEkeqYPaO3h1k6zaMdRFVJ5AB8rW9HNAYrYufLcU=",
+					"size": 638740
+				},
+				{
+					"type": "file",
+					"name": "scramjet.bundle.js",
+					"hash": "+07bI9d3Bi1yM0kOwjtp76ox6FkSrWAt5IIJsqWkWfc=",
+					"size": 900441
+				},
+				{
+					"type": "file",
+					"name": "scramjet.bundle.js.map",
+					"hash": "12dtaSt7aojMRIDltNn8GI9KH1/XnWXAVOBLA7+JF6E=",
+					"size": 638591
+				},
+				{
+					"type": "file",
+					"name": "scramjet.sync.js",
+					"hash": "d25h/gdeIxwQXKj5VAzOtjG5T25WW6XYRwVFFR4LqAQ=",
+					"size": 759
+				},
+				{
+					"type": "file",
+					"name": "scramjet.sync.js.map",
+					"hash": "lhLcebVaLgbRe+16mFbvySdJ5ZsCnud8i7u0+WJM+6o=",
+					"size": 3033
+				},
+				{
+					"type": "file",
+					"name": "scramjet.wasm.wasm",
+					"hash": "7VANjLAuoGgQcH7kDw7rV5DC6qW1NVCxnjAoFdKxMHo=",
+					"size": 536994
+				}
+			]
+		},
+		{
+			"type": "file",
+			"name": "LICENSE",
+			"hash": "DZak/2itbUtvHzD3E7GNUYSRK6jdOJ+GqncQ2weavLA=",
+			"size": 34523
+		},
+		{
+			"type": "file",
+			"name": "package.json",
+			"hash": "FagbUqnBmZUejROq9RN+z8xs5ip4ovzrrcUpt69obXY=",
+			"size": 3956
+		},
+		{
+			"type": "file",
+			"name": "README.md",
+			"hash": "BsbnJPaTwWfygr2bfiUix1k1YjZWAWdyVKX1Y4Ee3c0=",
+			"size": 3468
+		}
+	],
+	"links": {
+		"stats": "https://data.jsdelivr.com/v1/stats/packages/npm/@mercuryworkshop/scramjet@1.1.0",
+		"entrypoints": "https://data.jsdelivr.com/v1/packages/npm/@mercuryworkshop/scramjet@1.1.0/entrypoints"
+	}
+}
