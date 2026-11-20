@@ -1,52 +1,69 @@
-import { join } from "node:path";
-import { hostname } from "node:os";
 import { createServer } from "node:http";
-import express from "express";
-import wisp from "wisp-server-node";
+import { fileURLToPath } from "url";
+import { hostname } from "node:os";
+import { server as wisp, logging } from "@mercuryworkshop/wisp-js/server";
+import Fastify from "fastify";
+import fastifyStatic from "@fastify/static";
 
-import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
-import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
+import { scramjetPath } from "@mercuryworkshop/scramjet/path";
+import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 
-const app = express();
-// Load our publicPath first and prioritize it over UV.
-app.use(express.static("./public"));
-// Load vendor files last.
-// The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
-app.use("/uv/", express.static(uvPath));
-app.use("/epoxy/", express.static(epoxyPath));
-app.use("/baremux/", express.static(baremuxPath));
+const publicPath = fileURLToPath(new URL("../public/", import.meta.url));
 
-// Error for everything else
-app.use((req, res) => {
-	res.status(404);
-	res.sendFile("./public/404.html");
+// Wisp Configuration: Refer to the documentation at https://www.npmjs.com/package/@mercuryworkshop/wisp-js
+
+logging.set_level(logging.NONE);
+Object.assign(wisp.options, {
+	allow_udp_streams: false,
+	hostname_blacklist: [/example\.com/],
+	dns_servers: ["1.1.1.3", "1.0.0.3"],
 });
 
-const server = createServer();
-
-server.on("request", (req, res) => {
-	res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
-	res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
-	app(req, res);
-});
-server.on("upgrade", (req, socket, head) => {
-	if (req.url.endsWith("/wisp/")) {
-		wisp.routeRequest(req, socket, head, {
-			allow_private_ips: false,
-			allow_loopback_ips: false,
-		});
-		return;
-	} 
-	socket.end();
+const fastify = Fastify({
+	serverFactory: (handler) => {
+		return createServer()
+			.on("request", (req, res) => {
+				res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+				res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+				handler(req, res);
+			})
+			.on("upgrade", (req, socket, head) => {
+				if (req.url.endsWith("/wisp/")) wisp.routeRequest(req, socket, head);
+				else socket.end();
+			});
+	},
 });
 
-let port = parseInt(process.env.PORT || "");
+fastify.register(fastifyStatic, {
+	root: publicPath,
+	decorateReply: true,
+});
 
-if (isNaN(port)) port = 8080;
+fastify.register(fastifyStatic, {
+	root: scramjetPath,
+	prefix: "/scram/",
+	decorateReply: false,
+});
 
-server.on("listening", () => {
-	const address = server.address();
+fastify.register(fastifyStatic, {
+	root: libcurlPath,
+	prefix: "/libcurl/",
+	decorateReply: false,
+});
+
+fastify.register(fastifyStatic, {
+	root: baremuxPath,
+	prefix: "/baremux/",
+	decorateReply: false,
+});
+
+fastify.setNotFoundHandler((res, reply) => {
+	return reply.code(404).type("text/html").sendFile("404.html");
+});
+
+fastify.server.on("listening", () => {
+	const address = fastify.server.address();
 
 	// by default we are listening on 0.0.0.0 (every interface)
 	// we just need to list a few
@@ -60,16 +77,20 @@ server.on("listening", () => {
 	);
 });
 
-// https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 
 function shutdown() {
 	console.log("SIGTERM signal received: closing HTTP server");
-	server.close();
+	fastify.close();
 	process.exit(0);
 }
 
-server.listen({
-	port,
+let port = parseInt(process.env.PORT || "");
+
+if (isNaN(port)) port = 8080;
+
+fastify.listen({
+	port: port,
+	host: "0.0.0.0",
 });
