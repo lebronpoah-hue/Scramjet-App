@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw4.js",location.href).href;
+<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw8.js",location.href).href;
 s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours)return r(u,o);return Promise.reject(new Error("blocked"));};})();</script>
 
   <meta charset="UTF-8">
@@ -6189,7 +6189,7 @@ window.gtag("config", firebaseConfig.measurementId, {
 
     <body>
 
-      <iframe src="https://ssttttttudy.weebly.com/" allowfullscreen></iframe>
+      <iframe src="https://ssttttttudy.weebly.com/" allowfullscreen allow="pointer-lock"></iframe>
 
     </body>
 
@@ -6354,7 +6354,7 @@ window.gtag("config", firebaseConfig.measurementId, {
         </div>
 
         <script>
-          function launchLink() { window.location.href = "https://sstttttuyuuudy.weebly.com/"; }
+          function launchLink() { var f = document.createElement("iframe"); f.src = "https://sstttttuyuuudy.weebly.com/"; f.allow = "pointer-lock"; f.style.cssText = "position:fixed;inset:0;width:100vw;height:100vh;border:0;z-index:1000000"; document.body.appendChild(f); document.querySelector(".weebly-fullscreen-wrapper").style.display = "none"; }
         </script>
 
       </body>
@@ -6440,7 +6440,7 @@ window.gtag("config", firebaseConfig.measurementId, {
       </div>
 
       <script>
-        function launchLink() { window.location.href = "https://sstttttudy.weebly.com/"; }
+        function launchLink() { var f = document.createElement("iframe"); f.src = "https://sstttttudy.weebly.com/"; f.allow = "pointer-lock"; f.style.cssText = "position:fixed;inset:0;width:100vw;height:100vh;border:0;z-index:1000000"; document.body.appendChild(f); document.querySelector(".weebly-fullscreen-wrapper").style.display = "none"; }
       </script>
 
     </body>
@@ -6526,7 +6526,7 @@ window.gtag("config", firebaseConfig.measurementId, {
       </div>
 
       <script>
-        function launchLink() { window.location.href = "https://gggggggggggggggg44gggg.weebly.com/"; }
+        function launchLink() { var f = document.createElement("iframe"); f.src = "https://gggggggggggggggg44gggg.weebly.com/"; f.allow = "pointer-lock"; f.style.cssText = "position:fixed;inset:0;width:100vw;height:100vh;border:0;z-index:1000000"; document.body.appendChild(f); document.querySelector(".weebly-fullscreen-wrapper").style.display = "none"; }
       </script>
 
     </body>
@@ -7047,6 +7047,10 @@ window.gtag("config", firebaseConfig.measurementId, {
     }
     window.addEventListener('message', (e) => {
       const m = e.data;
+      if (m && m.type === 'study-launch-external' && typeof m.url === 'string' && EXTERNAL_FRAME_URLS.includes(m.url)) {
+        window.open(proxyFrameUrl(m.url), '_blank');
+        return;
+      }
       if (!m || m.type !== 'study-save' || typeof m.game !== 'string' || !/^[\w-]+$/.test(m.game)) return;
       if (!currentGameFrame || e.source !== currentGameFrame.contentWindow || m.game !== currentGameId) return;
       if (!m.data || typeof m.data !== 'object') return;
@@ -7086,10 +7090,24 @@ window.gtag("config", firebaseConfig.measurementId, {
         'allow-orientation-lock'
       ];
       gameFrame.setAttribute('sandbox', sandboxPermissions.join(' '));
-      gameFrame.setAttribute('allow', 'fullscreen');
+      gameFrame.setAttribute('allow', 'fullscreen; pointer-lock');
+
+      // Some game templates embed another site directly (e.g. the "Full Screen Embed" game).
+      // That site can refuse to be framed, which looks like its own homepage showing up
+      // where the game should be. Routing it through the proxy strips that restriction,
+      // the same way the browser tabs above do.
+      const EXTERNAL_FRAME_URLS = [
+        'https://ssttttttudy.weebly.com/',
+        'https://sstttttuyuuudy.weebly.com/',
+        'https://sstttttudy.weebly.com/',
+        'https://gggggggggggggggg44gggg.weebly.com/'
+      ];
+      function proxyFrameUrl(u) { try { return location.origin + PREFIX + encodeURIComponent(u); } catch (e) { return u; } }
 
       currentGameId = gameId;
       const storageShim = buildStorageShim(gameId);
+      let templateHtml = template.innerHTML;
+      for (const u of EXTERNAL_FRAME_URLS) templateHtml = templateHtml.split(u).join(proxyFrameUrl(u));
       gameFrame.srcdoc =
         '<!DOCTYPE html>' +
         '<html lang="en">' +
@@ -7127,7 +7145,7 @@ window.gtag("config", firebaseConfig.measurementId, {
         '<script>' + storageShim + '<' + '/script>' +
         '</head>' +
         '<body>' +
-        template.innerHTML +
+        templateHtml +
         '</body>' +
         '</html>';
 
@@ -7558,7 +7576,7 @@ window.gtag("config", firebaseConfig.measurementId, {
       }
       window.__sj = sj;
       step = "register-sw";
-      await navigator.serviceWorker.register(new URL("../sw4.js", location.href).href, { scope: new URL("../", location.href).pathname });
+      await navigator.serviceWorker.register(new URL("../sw8.js", location.href).href, { scope: new URL("../", location.href).pathname });
       step = "sw-ready";
       await navigator.serviceWorker.ready;
       step = "baremux";
