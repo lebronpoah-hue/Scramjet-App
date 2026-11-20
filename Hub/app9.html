@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw8.js",location.href).href;
+<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw9.js",location.href).href;
 s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours)return r(u,o);return Promise.reject(new Error("blocked"));};})();</script>
 
   <meta charset="UTF-8">
@@ -7576,7 +7576,7 @@ window.gtag("config", firebaseConfig.measurementId, {
       }
       window.__sj = sj;
       step = "register-sw";
-      await navigator.serviceWorker.register(new URL("../sw8.js", location.href).href, { scope: new URL("../", location.href).pathname });
+      await navigator.serviceWorker.register(new URL("../sw9.js", location.href).href, { scope: new URL("../", location.href).pathname });
       step = "sw-ready";
       await navigator.serviceWorker.ready;
       step = "baremux";
@@ -7641,7 +7641,7 @@ window.gtag("config", firebaseConfig.measurementId, {
     const bar = document.createElement("div"); bar.className = "tb-bar-load";
     const iframe = document.createElement("iframe");
     iframe.setAttribute("allow", "fullscreen; autoplay; clipboard-read; clipboard-write");
-    iframe.addEventListener("load", () => onLoad(t));
+    iframe.addEventListener("load", () => { onLoad(t); injectDebugConsole(iframe); });
     pane.append(bar, iframe);
     content.appendChild(pane);
     t.pane = pane; t.iframe = iframe;
@@ -7652,6 +7652,20 @@ window.gtag("config", firebaseConfig.measurementId, {
     t.hist.push(url);
     while (t.hist.length > MAX_BACK + 1) t.hist.shift();
     t.idx = t.hist.length - 1;
+  }
+
+  // Drops a floating console button onto every page viewed in these browser tabs, so you can
+  // see real page errors on a tablet with no developer-tools menu of its own. Debugging aid only.
+  function injectDebugConsole(iframe) {
+    try {
+      const d = iframe.contentDocument;
+      if (!d || d.getElementById("__dbgc")) return;
+      const s = d.createElement("script");
+      s.id = "__dbgc";
+      s.src = "https://cdn.jsdelivr.net/npm/eruda";
+      s.onload = () => { try { d.defaultView.eruda.init(); } catch (e) {} };
+      (d.body || d.documentElement).appendChild(s);
+    } catch (e) {}
   }
 
   function onLoad(t) {
