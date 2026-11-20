@@ -19,7 +19,7 @@ async function handle(event) {
     const u = new URL(event.request.url);
     // Serve the hub page as real HTML (jsDelivr would send it as text/plain)
     if (event.request.mode === "navigate" && (u.pathname === APP_PATH || u.pathname === APP_PATH.slice(0, -1))) {
-      const r = await fetch(BASE + "app8.html");
+      const r = await fetch(BASE + "app9.html");
       return new Response(await r.text(), { headers: { "content-type": "text/html; charset=utf-8" } });
     }
     // Only touch Scramjet's database for proxied URLs, so the page can create it first
