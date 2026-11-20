@@ -6,16 +6,7 @@
   var t = document.getElementById("t");
   try {
     var base = new URL("./", location.href).href;
-    // Clean up any old/stuck service worker from an earlier test version before registering this one
-    var regs = await navigator.serviceWorker.getRegistrations();
-    for (var i = 0; i < regs.length; i++) {
-      var r = regs[i];
-      var active = r.active && r.active.scriptURL;
-      if (active && active.indexOf(base) === 0 && active !== base + "sw11.js") {
-        await r.unregister();
-      }
-    }
-    await navigator.serviceWorker.register(base + "sw11.js", { scope: base });
+    await navigator.serviceWorker.register(base + "sw4.js", { scope: base });
     await navigator.serviceWorker.ready;
     location.replace(base + "app/");
   } catch (e) {
@@ -23,3 +14,4 @@
   }
 })();
 ]]></script>
+</svg>
