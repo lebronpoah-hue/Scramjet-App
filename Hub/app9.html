@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw11.js",location.href).href;
+<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw9.js",location.href).href;
 s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours)return r(u,o);return Promise.reject(new Error("blocked"));};})();</script>
 
   <meta charset="UTF-8">
@@ -7576,13 +7576,13 @@ window.gtag("config", firebaseConfig.measurementId, {
       }
       window.__sj = sj;
       step = "register-sw";
-      await navigator.serviceWorker.register(new URL("../sw11.js", location.href).href, { scope: new URL("../", location.href).pathname });
+      await navigator.serviceWorker.register(new URL("../sw9.js", location.href).href, { scope: new URL("../", location.href).pathname });
       step = "sw-ready";
       await navigator.serviceWorker.ready;
       step = "baremux";
       const conn = new BareMux.BareMuxConnection("https://cdn.jsdelivr.net/npm/@mercuryworkshop/bare-mux@2.1.7/dist/worker.js");
       step = "transport";
-      await conn.setTransport("https://cdn.jsdelivr.net/npm/@mercuryworkshop/epoxy-transport@2.1.10/dist/index.mjs", [{ wisp: WISP_URL }]);
+      await conn.setTransport("https://cdn.jsdelivr.net/npm/@mercuryworkshop/libcurl-transport@1.5.0/dist/index.mjs", [{ wisp: WISP_URL }]);
       await new Promise((r) => setTimeout(r, 600));    // let libcurl finish loading its wasm
       return sj;
       } catch (e) { try { e.message = "[" + step + "] " + e.message; } catch (x) {} throw e; }
