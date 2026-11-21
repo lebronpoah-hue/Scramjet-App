@@ -1,7 +1,6 @@
 import { join } from "node:path";
-import { hostname } from "node:os";
-import { createServer } from "node:http";
-import express from "express";
+import Fastify from "fastify";
+import fastifyStatic from "@fastify/static";
 import { server as wisp } from "@mercuryworkshop/wisp-js/server";
 
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
@@ -12,25 +11,49 @@ import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 wisp.options.allow_private_ips = false;
 wisp.options.allow_loopback_ips = false;
 
-const app = express();
-app.use(express.static("./public"));
-app.use("/uv/", express.static(uvPath));
-app.use("/epoxy/", express.static(epoxyPath));
-app.use("/baremux/", express.static(baremuxPath));
+const app = Fastify();
 
-app.use((req, res) => {
-	res.status(404);
-	res.sendFile("./public/404.html");
+app.register(fastifyStatic, {
+	root: join(process.cwd(), "public"),
+});
+app.register(fastifyStatic, {
+	root: uvPath,
+	prefix: "/uv/",
+	decorateReply: false,
+});
+app.register(fastifyStatic, {
+	root: epoxyPath,
+	prefix: "/epoxy/",
+	decorateReply: false,
+});
+app.register(fastifyStatic, {
+	root: baremuxPath,
+	prefix: "/baremux/",
+	decorateReply: false,
 });
 
-const server = createServer();
-
-server.on("request", (req, res) => {
-	res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
-	res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
-	app(req, res);
+app.setNotFoundHandler((req, reply) => {
+	reply.code(404).sendFile("404.html");
 });
-server.on("upgrade", (req, socket, head) => {
+
+app.addHook("onRequest", (req, reply, done) => {
+	reply.header("Cross-Origin-Opener-Policy", "same-origin");
+	reply.header("Cross-Origin-Embedder-Policy", "require-corp");
+	done();
+});
+
+let port = parseInt(process.env.PORT || "");
+if (isNaN(port)) port = 8080;
+
+app.listen({ port, host: "0.0.0.0" }, (err, address) => {
+	if (err) {
+		console.error(err);
+		process.exit(1);
+	}
+	console.log("Listening on:", address);
+});
+
+app.server.on("upgrade", (req, socket, head) => {
 	if (req.url.endsWith("/wisp/")) {
 		wisp.routeRequest(req, socket, head);
 		return;
@@ -38,28 +61,11 @@ server.on("upgrade", (req, socket, head) => {
 	socket.end();
 });
 
-let port = parseInt(process.env.PORT || "");
-if (isNaN(port)) port = 8080;
-
-server.on("listening", () => {
-	const address = server.address();
-	console.log("Listening on:");
-	console.log(`\thttp://localhost:${address.port}`);
-	console.log(`\thttp://${hostname()}:${address.port}`);
-	console.log(
-		`\thttp://${
-			address.family === "IPv6" ? `[${address.address}]` : address.address
-		}:${address.port}`
-	);
-});
-
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 
 function shutdown() {
 	console.log("SIGTERM signal received: closing HTTP server");
-	server.close();
+	app.close();
 	process.exit(0);
 }
-
-server.listen({ port });
