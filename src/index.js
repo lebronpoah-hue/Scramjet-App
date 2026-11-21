@@ -3,10 +3,6 @@ import Fastify from "fastify";
 import fastifyStatic from "@fastify/static";
 import { server as wisp } from "@mercuryworkshop/wisp-js/server";
 
-import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
-import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
-import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
-
 // Public web proxy: no need to restrict which public addresses it can reach.
 wisp.options.allow_private_ips = false;
 wisp.options.allow_loopback_ips = false;
@@ -15,21 +11,6 @@ const app = Fastify();
 
 app.register(fastifyStatic, {
 	root: join(process.cwd(), "public"),
-});
-app.register(fastifyStatic, {
-	root: uvPath,
-	prefix: "/uv/",
-	decorateReply: false,
-});
-app.register(fastifyStatic, {
-	root: epoxyPath,
-	prefix: "/epoxy/",
-	decorateReply: false,
-});
-app.register(fastifyStatic, {
-	root: baremuxPath,
-	prefix: "/baremux/",
-	decorateReply: false,
 });
 
 app.setNotFoundHandler((req, reply) => {
