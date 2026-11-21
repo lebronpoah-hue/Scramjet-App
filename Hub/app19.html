@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw18.js",location.href).href;
+<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw19.js",location.href).href;
 s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours)return r(u,o);return Promise.reject(new Error("blocked"));};})();</script>
 
   <meta charset="UTF-8">
@@ -7605,7 +7605,7 @@ window.gtag("config", firebaseConfig.measurementId, {
       }
       window.__sj = sj;
       step = "register-sw";
-      await navigator.serviceWorker.register(new URL("../sw18.js", location.href).href, { scope: new URL("../", location.href).pathname });
+      await navigator.serviceWorker.register(new URL("../sw19.js", location.href).href, { scope: new URL("../", location.href).pathname });
       step = "sw-ready";
       await navigator.serviceWorker.ready;
       step = "baremux";
@@ -7830,15 +7830,24 @@ window.gtag("config", firebaseConfig.measurementId, {
 })();
 </script>
 
-    <div id="chatPanel" style="position:fixed;inset:24px;z-index:999998;background:#0b0b0f;border:1px solid #2a2a33;border-radius:18px;display:none;flex-direction:column;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,sans-serif;color:#eee;box-shadow:0 10px 40px rgba(0,0,0,.6);">
-      <div style="padding:14px 16px;background:#17171d;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #26262f;">
-        <div style="font-size:15px;font-weight:700;">Study GC</div>
-        <div id="chatClose" style="cursor:pointer;font-size:22px;line-height:1;padding:4px 8px;color:#9aa0a6;">&times;</div>
+    <style>
+      @keyframes chatPopIn { from { opacity:0; transform:translateY(8px) scale(.96); } to { opacity:1; transform:translateY(0) scale(1); } }
+      @keyframes chatPanelIn { from { opacity:0; transform:scale(.97); } to { opacity:1; transform:scale(1); } }
+      #chatPanel.open { animation: chatPanelIn .25s ease-out; }
+      .chat-bubble { animation: chatPopIn .22s cubic-bezier(.2,.9,.3,1.2); transition: transform .15s; }
+      .chat-bubble:hover { transform: scale(1.015); }
+      #chatForm button:active { transform: scale(.94); }
+      #chatInput:focus { box-shadow: 0 0 0 2px rgba(255,76,166,.5); }
+    </style>
+    <div id="chatPanel" style="position:fixed;inset:24px;z-index:999998;background:linear-gradient(160deg,#120a1f,#0b0b14 55%,#07131f);border:1px solid #3a2a4a;border-radius:22px;display:none;flex-direction:column;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,sans-serif;color:#f2eefc;box-shadow:0 20px 60px rgba(0,0,0,.65);">
+      <div style="padding:16px 18px;background:linear-gradient(90deg,#ff4ca6,#8a5cff);display:flex;align-items:center;justify-content:space-between;">
+        <div style="font-size:16px;font-weight:800;color:#fff;letter-spacing:.2px;">✨ Study GC</div>
+        <div id="chatClose" style="cursor:pointer;font-size:24px;line-height:1;padding:4px 10px;color:#fff;">&times;</div>
       </div>
-      <div id="chatMessages" style="flex:1;overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:2px;"></div>
-      <form id="chatForm" style="display:flex;gap:8px;padding:10px 12px;border-top:1px solid #26262f;background:#111116;">
-        <input id="chatInput" maxlength="500" placeholder="Message" style="flex:1;background:#1c1c24;border:0;color:#eee;padding:10px 14px;font-size:15px;border-radius:18px;outline:none;">
-        <button type="submit" style="background:#0a84ff;color:#fff;border:0;padding:0 16px;border-radius:18px;cursor:pointer;font-size:15px;font-weight:600;">Send</button>
+      <div id="chatMessages" style="flex:1;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:3px;"></div>
+      <form id="chatForm" style="display:flex;gap:10px;padding:12px 14px;border-top:1px solid #2e2240;background:#140d21;">
+        <input id="chatInput" maxlength="500" placeholder="Message" style="flex:1;background:#1f1630;border:1px solid #3a2a4a;color:#f2eefc;padding:11px 16px;font-size:15px;border-radius:20px;outline:none;transition:box-shadow .15s;">
+        <button type="submit" style="background:linear-gradient(135deg,#ff4ca6,#8a5cff);color:#fff;border:0;padding:0 18px;border-radius:20px;cursor:pointer;font-size:15px;font-weight:700;transition:transform .12s;">Send</button>
       </form>
     </div>
     <script>
@@ -7879,15 +7888,17 @@ window.gtag("config", firebaseConfig.measurementId, {
         }
 
         var bubble = document.createElement("div");
+        bubble.className = "chat-bubble";
         bubble.textContent = m.text;
         bubble.style.maxWidth = "75%";
-        bubble.style.padding = "9px 14px";
-        bubble.style.borderRadius = "18px";
+        bubble.style.padding = "10px 15px";
+        bubble.style.borderRadius = "20px";
         bubble.style.fontSize = "15px";
-        bubble.style.lineHeight = "1.3";
+        bubble.style.lineHeight = "1.35";
         bubble.style.wordBreak = "break-word";
-        bubble.style.background = mine ? "#0a84ff" : "#26262f";
-        bubble.style.color = mine ? "#fff" : "#eee";
+        bubble.style.background = mine ? "linear-gradient(135deg,#ff4ca6,#8a5cff)" : "#241a33";
+        bubble.style.color = "#fff";
+        bubble.style.boxShadow = mine ? "0 4px 14px rgba(255,76,166,.25)" : "0 2px 8px rgba(0,0,0,.25)";
         row.appendChild(bubble);
 
         list.appendChild(row);
@@ -7909,6 +7920,7 @@ window.gtag("config", firebaseConfig.measurementId, {
 
       function openChat() {
         panel.style.display = "flex";
+        panel.classList.add("open");
         ensureName();
         connect();
       }
