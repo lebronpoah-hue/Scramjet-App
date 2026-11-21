@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw17.js",location.href).href;
+<script>(function(){var s=navigator.serviceWorker;if(!s)return;var r=s.register.bind(s);var ours=new URL("../sw18.js",location.href).href;
 s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours)return r(u,o);return Promise.reject(new Error("blocked"));};})();</script>
 
   <meta charset="UTF-8">
@@ -7605,7 +7605,7 @@ window.gtag("config", firebaseConfig.measurementId, {
       }
       window.__sj = sj;
       step = "register-sw";
-      await navigator.serviceWorker.register(new URL("../sw17.js", location.href).href, { scope: new URL("../", location.href).pathname });
+      await navigator.serviceWorker.register(new URL("../sw18.js", location.href).href, { scope: new URL("../", location.href).pathname });
       step = "sw-ready";
       await navigator.serviceWorker.ready;
       step = "baremux";
@@ -7830,20 +7830,22 @@ window.gtag("config", firebaseConfig.measurementId, {
 })();
 </script>
 
-    <div id="chatToggle" style="position:fixed;right:16px;bottom:16px;z-index:999998;width:52px;height:52px;border-radius:50%;background:#1b1b22;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:22px;box-shadow:0 2px 10px rgba(0,0,0,.4)">💬</div> <!-- bubble stays as a shortcut; "Study GC" in the nav opens the same panel -->
-    <div id="chatPanel" style="position:fixed;right:16px;bottom:78px;z-index:999998;width:280px;max-width:80vw;height:380px;max-height:60vh;background:#16161c;border:1px solid #2a2a33;border-radius:10px;display:none;flex-direction:column;overflow:hidden;font-family:sans-serif;color:#eee">
-      <div style="padding:8px 10px;background:#1f1f28;font-size:13px;font-weight:600;">Game Hub Chat</div>
-      <div id="chatMessages" style="flex:1;overflow-y:auto;padding:8px;font-size:13px;line-height:1.4;"></div>
-      <form id="chatForm" style="display:flex;border-top:1px solid #2a2a33;">
-        <input id="chatInput" maxlength="500" placeholder="Message" style="flex:1;background:#0f0f14;border:0;color:#eee;padding:8px;font-size:13px;outline:none;">
-        <button type="submit" style="background:#2a2a33;color:#eee;border:0;padding:0 14px;cursor:pointer;">Send</button>
+    <div id="chatPanel" style="position:fixed;inset:24px;z-index:999998;background:#0b0b0f;border:1px solid #2a2a33;border-radius:18px;display:none;flex-direction:column;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,sans-serif;color:#eee;box-shadow:0 10px 40px rgba(0,0,0,.6);">
+      <div style="padding:14px 16px;background:#17171d;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #26262f;">
+        <div style="font-size:15px;font-weight:700;">Study GC</div>
+        <div id="chatClose" style="cursor:pointer;font-size:22px;line-height:1;padding:4px 8px;color:#9aa0a6;">&times;</div>
+      </div>
+      <div id="chatMessages" style="flex:1;overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:2px;"></div>
+      <form id="chatForm" style="display:flex;gap:8px;padding:10px 12px;border-top:1px solid #26262f;background:#111116;">
+        <input id="chatInput" maxlength="500" placeholder="Message" style="flex:1;background:#1c1c24;border:0;color:#eee;padding:10px 14px;font-size:15px;border-radius:18px;outline:none;">
+        <button type="submit" style="background:#0a84ff;color:#fff;border:0;padding:0 16px;border-radius:18px;cursor:pointer;font-size:15px;font-weight:600;">Send</button>
       </form>
     </div>
     <script>
     (function () {
       var CHAT_SERVER = "wss://scramjet-app-1-tj4z.onrender.com/chat/"; // one fixed server, so everyone shares the same chat
-      var toggle = document.getElementById("chatToggle");
       var navBtn = document.getElementById("navChatBtn");
+      var closeBtn = document.getElementById("chatClose");
       var panel = document.getElementById("chatPanel");
       var list = document.getElementById("chatMessages");
       var form = document.getElementById("chatForm");
@@ -7860,14 +7862,34 @@ window.gtag("config", firebaseConfig.measurementId, {
       }
 
       function addMsg(m) {
+        var mine = m.name === name;
         var row = document.createElement("div");
-        row.style.marginBottom = "6px";
-        var who = document.createElement("span");
-        who.textContent = m.name + ": ";
-        who.style.fontWeight = "600";
-        who.style.color = "#8ab4ff";
-        row.appendChild(who);
-        row.appendChild(document.createTextNode(m.text));
+        row.style.display = "flex";
+        row.style.flexDirection = "column";
+        row.style.alignItems = mine ? "flex-end" : "flex-start";
+        row.style.margin = "4px 0";
+
+        if (!mine) {
+          var who = document.createElement("div");
+          who.textContent = m.name;
+          who.style.fontSize = "11px";
+          who.style.color = "#9aa0a6";
+          who.style.margin = "0 10px 2px";
+          row.appendChild(who);
+        }
+
+        var bubble = document.createElement("div");
+        bubble.textContent = m.text;
+        bubble.style.maxWidth = "75%";
+        bubble.style.padding = "9px 14px";
+        bubble.style.borderRadius = "18px";
+        bubble.style.fontSize = "15px";
+        bubble.style.lineHeight = "1.3";
+        bubble.style.wordBreak = "break-word";
+        bubble.style.background = mine ? "#0a84ff" : "#26262f";
+        bubble.style.color = mine ? "#fff" : "#eee";
+        row.appendChild(bubble);
+
         list.appendChild(row);
         list.scrollTop = list.scrollHeight;
       }
@@ -7885,13 +7907,17 @@ window.gtag("config", firebaseConfig.measurementId, {
         ws.onclose = function () { ws = null; setTimeout(connect, 2000); };
       }
 
-      function toggleChat() {
-        var open = panel.style.display === "flex";
-        panel.style.display = open ? "none" : "flex";
-        if (!open) { ensureName(); connect(); }
+      function openChat() {
+        panel.style.display = "flex";
+        ensureName();
+        connect();
       }
-      toggle.addEventListener("click", toggleChat);
-      if (navBtn) navBtn.addEventListener("click", toggleChat);
+      function closeChat() {
+        panel.style.display = "none";
+      }
+
+      if (navBtn) navBtn.addEventListener("click", openChat);
+      closeBtn.addEventListener("click", closeChat);
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
