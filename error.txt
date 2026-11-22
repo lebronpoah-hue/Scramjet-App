@@ -1,9 +1,333 @@
-/usr/lib/python3/dist-packages/numpy/core
-/content/scramjet/packages/core
+Cloning into 'scramjet'...
+remote: Enumerating objects: 18525, done.
+remote: Counting objects: 100% (44/44), done.
+remote: Compressing objects: 100% (31/31), done.
+remote: Total 18525 (delta 24), reused 16 (delta 13), pack-reused 18481 (from 3)
+Receiving objects: 100% (18525/18525), 19.21 MiB | 7.02 MiB/s, done.
+Resolving deltas: 100% (11837/11837), done.
+/content/scramjet
+info: downloading installer
+info: profile set to default
+info: default host tuple is x86_64-unknown-linux-gnu
+info: syncing channel updates for stable-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-12 for version 1.100.0 (0ef1bc386 2026-11-09)
+info: downloading 6 components
+      rustfmt installed                        2.41 MiB                         info: default toolchain set to stable-x86_64-unknown-linux-gnu
+
+  stable-x86_64-unknown-linux-gnu installed - rustc 1.100.0 (0ef1bc386 2026-11-09)
+
+
+Rust is installed now. Great!
+
+To get started you may need to restart your current shell.
+This would reload your PATH environment variable to include
+Cargo's bin directory ($HOME/.cargo/bin).
+
+To configure your current shell, you need to source the
+corresponding env file under $HOME/.cargo.
+
+Consider running the right command for your shell (note the leading DOT):
+. "$HOME/.cargo/env" # For sh/ash/dash/pdksh/bash
+cargo:rerun-if-env-changed=CC_x86_64-unknown-linux-gnu
+CC_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CC_x86_64_unknown_linux_gnu
+CC_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CPATH
+cargo:rerun-if-env-changed=C_INCLUDE_PATH
+cargo:rerun-if-env-changed=CPLUS_INCLUDE_PATH
+cargo:rerun-if-env-changed=OBJC_INCLUDE_PATH
+cargo:rerun-if-env-changed=OBJCPLUS_INCLUDE_PATH
+cargo:rerun-if-env-changed=COMPILER_PATH
+cargo:rerun-if-env-changed=SOURCE_DATE_EPOCH
+cargo:rerun-if-env-changed=GCC_EXEC_PREFIX
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_unknown_linux_gnu
+CFLAGS_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-linux-gnu
+CFLAGS_x86_64-unknown-linux-gnu = None
+info: downloading component rust-std
+rust-std-wasm32-unknown-unknown installed                       21.95 MiB       info: syncing channel updates for nightly-x86_64-unknown-linux-gnu
+info: latest update on 2026-11-22 for version 1.102.0-nightly (bdf712ee8 2026-11-21)
+info: downloading 6 components
+        rustc installed                       80.63 MiB                               rustfmt installed                        2.41 MiB                         warn: the missing active toolchain `nightly-x86_64-unknown-linux-gnu` has been auto-installed
+warn: auto-installation is deprecated for most `rustup` commands
+warn: scripts relying on this behavior in `rustup` may stop working in the future
+warn: to install the active toolchain, use `rustup install` instead
+warn: see <https://github.com/rust-lang/rustup/issues/4836> for more info
+info: downloading component rust-src
+     rust-src installed                        5.77 MiB                         ⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙⠹⠸⠼⠴⠦
+added 2 packages in 4s
+Scope: all 9 workspace projects
+? Verifying lockfile against supply-chain policies (753 entries)...
+Update available! 12.17.0 → 12.21.0.
+Changelog: https://pnpm.io/v/12.21.0
+To update, run: curl -fsSL https://get.pnpm.io/install.sh | sh -
+Progress: resolved 693, reused 0, downloaded 0, added 0
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: /root/.local/share/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 693, reused 0, downloaded 1, added 0
+Progress: resolved 693, reused 0, downloaded 31, added 30
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 0.00 B/18.60 MB
+Progress: resolved 693, reused 0, downloaded 86, added 84
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 605.00 B/18.60 MB
+Progress: resolved 693, reused 0, downloaded 136, added 136
+Progress: resolved 693, reused 0, downloaded 158, added 158
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 1.03 MB/18.60 MB
+Progress: resolved 693, reused 0, downloaded 185, added 186
+Progress: resolved 693, reused 0, downloaded 211, added 212
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 2.53 MB/18.60 MB
+Progress: resolved 693, reused 0, downloaded 236, added 236
+Downloading monaco-editor@0.54.0: 0.00 B/16.71 MB
+Progress: resolved 693, reused 0, downloaded 256, added 256
+Downloading monaco-editor@0.54.0: 612.00 B/16.71 MB
+Progress: resolved 693, reused 0, downloaded 282, added 281
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 4.01 MB/18.60 MB
+Progress: resolved 693, reused 0, downloaded 326, added 323
+Downloading monaco-editor@0.54.0: 851.96 kB/16.71 MB
+Progress: resolved 693, reused 0, downloaded 350, added 351
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 6.53 MB/18.60 MB
+✓ Lockfile passes supply-chain policies (753 entries in 2.4s)
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 693, reused 0, downloaded 366, added 362
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 6.53 MB/18.60 MB
+Downloading monaco-editor@0.54.0: 851.96 kB/16.71 MB
+Progress: resolved 693, reused 0, downloaded 404, added 404
+Downloading monaco-editor@0.54.0: 8.09 MB/16.71 MB
+Downloading monaco-editor@0.54.0: 16.71 MB/16.71 MB, done
+Progress: resolved 693, reused 0, downloaded 425, added 418
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 6.53 MB/18.60 MB
+Progress: resolved 693, reused 0, downloaded 439, added 438
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 10.73 MB/18.60 MB
+Progress: resolved 693, reused 0, downloaded 464, added 465
+Progress: resolved 693, reused 0, downloaded 488, added 480
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 13.09 MB/18.60 MB
+Progress: resolved 693, reused 0, downloaded 516, added 517
+Progress: resolved 693, reused 0, downloaded 545, added 546
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 15.23 MB/18.60 MB
+Progress: resolved 693, reused 0, downloaded 548, added 549
+Progress: resolved 693, reused 0, downloaded 561, added 563
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 17.43 MB/18.60 MB
+Progress: resolved 693, reused 0, downloaded 572, added 570
+Progress: resolved 693, reused 0, downloaded 588, added 571
+Progress: resolved 693, reused 0, downloaded 608, added 571
+Progress: resolved 693, reused 0, downloaded 628, added 590
+Progress: resolved 693, reused 0, downloaded 649, added 631
+Downloading @rspack/binding-linux-x64-gnu@1.6.7: 18.60 MB/18.60 MB, done
+Progress: resolved 693, reused 0, downloaded 671, added 672
+Progress: resolved 693, reused 0, downloaded 676, added 677
+Progress: resolved 693, reused 0, downloaded 683, added 684
+Progress: resolved 693, reused 0, downloaded 685, added 686
+Progress: resolved 693, reused 0, downloaded 688, added 689
+Progress: resolved 693, reused 0, downloaded 689, added 690
+Progress: resolved 693, reused 0, downloaded 690, added 691
+Progress: resolved 693, reused 0, downloaded 691, added 692
+Packages: +693
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 693, reused 0, downloaded 691, added 693
+Progress: resolved 693, reused 0, downloaded 691, added 693, done
+node_modules/.pnpm/core-js@3.47.0/node_modules/core-js: Running postinstall script...
+node_modules/.pnpm/bufferutil@4.0.9/node_modules/bufferutil: Running install script...
+node_modules/.pnpm/esbuild@0.27.2/node_modules/esbuild: Running postinstall script...
+node_modules/.pnpm/core-js@3.47.0/node_modules/core-js: Running postinstall script, done in 101ms
+node_modules/.pnpm/esbuild@0.27.2/node_modules/esbuild: Running postinstall script, done in 192ms
+node_modules/.pnpm/bufferutil@4.0.9/node_modules/bufferutil: Running install script, done in 325ms
+
+dependencies:
++ prettier 3.6.2
+
+devDependencies:
++ @fastify/deepmerge 3.2.1
++ @mercuryworkshop/wisp-js 0.4.1
++ @rsdoctor/rspack-plugin 1.4.0
++ @rspack/cli 1.5.8
++ @rspack/core 1.6.7
++ ava 6.4.1
++ chafa-wasm 0.3.1
++ chalk 5.6.2
++ eslint 10.2.0
++ glob 13.0.6
++ rspack-merge 1.0.1
++ ts-checker-rspack-plugin 1.1.6
++ tsc-alias 1.8.16
++ vite 7.3.0
+
+Done in 10.3s using pnpm v12.17.0
     Updating crates.io index
+ Downloading crates ...
+  Downloaded wasm-bindgen-cli v0.2.105
   Installing wasm-bindgen-cli v0.2.105
     Updating crates.io index
     Updating crates.io index
+ Downloading crates ...
+  Downloaded adler2 v2.0.1
+  Downloaded alloc-no-stdlib v2.0.4
+  Downloaded alloc-stdlib v0.2.2
+  Downloaded ahash v0.8.12
+  Downloaded cfg-if v1.0.4
+  Downloaded mime v0.3.17
+  Downloaded percent-encoding v2.3.2
+  Downloaded potential_utf v0.1.3
+  Downloaded subtle v2.6.1
+  Downloaded chunked_transfer v1.5.0
+  Downloaded rand_chacha v0.3.1
+  Downloaded either v1.15.0
+  Downloaded form_urlencoded v1.2.2
+  Downloaded httpdate v1.0.3
+  Downloaded equivalent v1.0.2
+  Downloaded synstructure v0.13.2
+  Downloaded anstyle-query v1.1.4
+  Downloaded clap_lex v0.7.6
+  Downloaded env_filter v0.1.4
+  Downloaded ascii v1.1.0
+  Downloaded crc32fast v1.5.0
+  Downloaded getrandom v0.2.16
+  Downloaded quote v1.0.41
+  Downloaded errno v0.3.14
+  Downloaded fastrand v2.3.0
+  Downloaded heck v0.5.0
+  Downloaded colorchoice v1.0.4
+  Downloaded env_logger v0.11.8
+  Downloaded is_terminal_polyfill v1.70.2
+  Downloaded idna_adapter v1.2.1
+  Downloaded num-conv v0.1.0
+  Downloaded powerfmt v0.2.0
+  Downloaded foldhash v0.1.5
+  Downloaded rustc-demangle v0.1.26
+  Downloaded anstream v0.6.21
+  Downloaded anstyle-parse v0.2.7
+  Downloaded clap v4.5.50
+  Downloaded crossbeam-deque v0.8.6
+  Downloaded filetime v0.2.26
+  Downloaded id-arena v2.2.1
+  Downloaded displaydoc v0.2.5
+  Downloaded leb128fmt v0.1.0
+  Downloaded num_threads v0.1.7
+  Downloaded buf_redux v0.8.4
+  Downloaded leb128 v0.2.5
+  Downloaded simd-adler32 v0.3.7
+  Downloaded crossbeam-epoch v0.9.18
+  Downloaded httparse v1.10.1
+  Downloaded ppv-lite86 v0.2.21
+  Downloaded quick-error v1.2.3
+  Downloaded rand_core v0.6.4
+  Downloaded autocfg v1.5.0
+  Downloaded deranged v0.5.5
+  Downloaded find-msvc-tools v0.1.4
+  Downloaded itoa v1.0.15
+  Downloaded anstyle v1.0.13
+  Downloaded getrandom v0.3.4
+  Downloaded proc-macro2 v1.0.103
+  Downloaded clap_derive v4.5.49
+  Downloaded base64 v0.13.1
+  Downloaded fallible-iterator v0.2.0
+  Downloaded mime_guess v2.0.5
+  Downloaded num_cpus v1.17.0
+  Downloaded aho-corasick v1.1.3
+  Downloaded iana-time-zone v0.1.64
+  Downloaded litemap v0.8.0
+  Downloaded tempfile v3.23.0
+  Downloaded once_cell v1.21.3
+  Downloaded bitflags v2.10.0
+  Downloaded crossbeam-utils v0.8.21
+  Downloaded icu_properties v2.0.1
+  Downloaded icu_provider v2.0.0
+  Downloaded log v0.4.28
+  Downloaded num-traits v0.2.19
+  Downloaded anyhow v1.0.100
+  Downloaded base64 v0.22.1
+  Downloaded flate2 v1.1.5
+  Downloaded icu_normalizer v2.0.0
+  Downloaded icu_normalizer_data v2.0.0
+  Downloaded indexmap v1.9.3
+  Downloaded miniz_oxide v0.8.9
+  Downloaded multipart v0.18.0
+  Downloaded rayon-core v1.13.0
+  Downloaded ryu v1.0.20
+  Downloaded serde_derive v1.0.228
+  Downloaded cc v1.2.43
+  Downloaded hashbrown v0.12.3
+  Downloaded icu_locale_core v2.0.0
+  Downloaded memchr v2.7.6
+  Downloaded rand v0.8.5
+  Downloaded icu_collections v2.0.0
+  Downloaded indexmap v2.12.0
+  Downloaded hashbrown v0.16.0
+  Downloaded brotli-decompressor v4.0.3
+  Downloaded hashbrown v0.14.5
+  Downloaded hashbrown v0.15.5
+  Downloaded idna v1.1.0
+  Downloaded clap_builder v4.5.50
+  Downloaded icu_properties_data v2.0.1
+  Downloaded rayon v1.11.0
+  Downloaded regex v1.12.2
+  Downloaded threadpool v1.8.1
+  Downloaded untrusted v0.9.0
+  Downloaded utf8_iter v1.0.4
+  Downloaded utf8parse v0.2.2
+  Downloaded wasm-bindgen-shared v0.2.105
+  Downloaded webpki-roots v0.26.11
+  Downloaded zerofrom v0.1.6
+  Downloaded zerofrom-derive v0.1.6
+  Downloaded sha1_smol v1.0.1
+  Downloaded version_check v0.9.5
+  Downloaded walrus-macro v0.24.0
+  Downloaded yoke-derive v0.8.0
+  Downloaded stable_deref_trait v1.2.1
+  Downloaded time-core v0.1.6
+  Downloaded chrono v0.4.42
+  Downloaded rustix v1.1.2
+  Downloaded safemem v0.3.3
+  Downloaded strsim v0.11.1
+  Downloaded regex-automata v0.4.13
+  Downloaded twoway v0.1.8
+  Downloaded shlex v1.3.0
+  Downloaded zeroize v1.8.2
+  Downloaded unicase v2.8.1
+  Downloaded zerovec-derive v0.11.1
+  Downloaded jiff v0.2.15
+  Downloaded semver v1.0.27
+  Downloaded writeable v0.6.1
+  Downloaded gimli v0.26.2
+  Downloaded yoke v0.8.0
+  Downloaded smallvec v1.15.1
+  Downloaded libc v0.2.177
+  Downloaded tinystr v0.8.1
+  Downloaded unicode-ident v1.0.20
+  Downloaded rustls-pki-types v1.13.0
+  Downloaded serde_core v1.0.228
+  Downloaded tiny_http v0.12.0
+  Downloaded zerotrie v0.2.2
+  Downloaded rustls-webpki v0.103.7
+  Downloaded wasm-encoder v0.240.0
+  Downloaded serde v1.0.228
+  Downloaded rouille v3.6.2
+  Downloaded url v2.5.7
+  Downloaded ureq v2.12.1
+  Downloaded wasm-bindgen-cli-support v0.2.105
+  Downloaded zerovec v0.11.4
+  Downloaded linux-raw-sys v0.11.0
+  Downloaded time v0.3.44
+  Downloaded serde_json v1.0.145
+  Downloaded syn v2.0.108
+  Downloaded walrus v0.24.2
+  Downloaded regex-syntax v0.8.8
+  Downloaded wasmparser v0.214.0
+  Downloaded zerocopy v0.8.27
+  Downloaded webpki-roots v1.0.3
+  Downloaded wasmparser v0.240.0
+  Downloaded rustls v0.23.34
+  Downloaded ring v0.17.14
    Compiling proc-macro2 v1.0.103
    Compiling unicode-ident v1.0.20
    Compiling quote v1.0.41
@@ -12,17 +336,17 @@
    Compiling stable_deref_trait v1.2.1
    Compiling syn v2.0.108
    Compiling serde_core v1.0.228
-   Compiling memchr v2.7.6
-   Compiling synstructure v0.13.2
-   Compiling zerocopy v0.8.27
-   Compiling serde v1.0.228
    Compiling autocfg v1.5.0
+   Compiling synstructure v0.13.2
+   Compiling memchr v2.7.6
    Compiling zerofrom-derive v0.1.6
    Compiling yoke-derive v0.8.0
-   Compiling zerovec-derive v0.11.1
    Compiling zerofrom v0.1.6
+   Compiling zerovec-derive v0.11.1
    Compiling yoke v0.8.0
    Compiling displaydoc v0.2.5
+   Compiling serde v1.0.228
+   Compiling zerocopy v0.8.27
    Compiling serde_derive v1.0.228
    Compiling zerovec v0.11.4
    Compiling tinystr v0.8.1
@@ -35,115 +359,115 @@
    Compiling icu_locale_core v2.0.0
    Compiling potential_utf v0.1.3
    Compiling zerotrie v0.2.2
-   Compiling icu_properties_data v2.0.1
+   Compiling bitflags v2.10.0
+   Compiling find-msvc-tools v0.1.4
    Compiling shlex v1.3.0
    Compiling icu_normalizer_data v2.0.0
-   Compiling find-msvc-tools v0.1.4
-   Compiling bitflags v2.10.0
+   Compiling icu_properties_data v2.0.1
    Compiling cc v1.2.43
    Compiling icu_provider v2.0.0
    Compiling icu_collections v2.0.0
    Compiling crossbeam-epoch v0.9.18
    Compiling ring v0.17.14
-   Compiling rayon-core v1.13.0
-   Compiling version_check v0.9.5
    Compiling zeroize v1.8.2
    Compiling smallvec v1.15.1
-   Compiling rustls-pki-types v1.13.0
+   Compiling version_check v0.9.5
+   Compiling rayon-core v1.13.0
    Compiling icu_normalizer v2.0.0
    Compiling ahash v0.8.12
-   Compiling crossbeam-deque v0.8.6
+   Compiling rustls-pki-types v1.13.0
    Compiling icu_properties v2.0.1
+   Compiling crossbeam-deque v0.8.6
    Compiling indexmap v1.9.3
-   Compiling unicase v2.8.1
-   Compiling heck v0.5.0
-   Compiling equivalent v1.0.2
    Compiling utf8parse v0.2.2
+   Compiling equivalent v1.0.2
    Compiling rustix v1.1.2
    Compiling hashbrown v0.16.0
+   Compiling heck v0.5.0
+   Compiling unicase v2.8.1
    Compiling getrandom v0.3.4
+   Compiling mime_guess v2.0.5
    Compiling indexmap v2.12.0
    Compiling anstyle-parse v0.2.7
-   Compiling mime_guess v2.0.5
    Compiling idna_adapter v1.2.1
    Compiling rand_core v0.6.4
    Compiling ppv-lite86 v0.2.21
-   Compiling num-traits v0.2.19
    Compiling aho-corasick v1.1.3
-   Compiling anstyle v1.0.13
-   Compiling foldhash v0.1.5
-   Compiling colorchoice v1.0.4
-   Compiling wasm-encoder v0.240.0
-   Compiling crc32fast v1.5.0
-   Compiling wasmparser v0.240.0
-   Compiling either v1.15.0
-   Compiling anstyle-query v1.1.4
-   Compiling untrusted v0.9.0
-   Compiling utf8_iter v1.0.4
+   Compiling num-traits v0.2.19
    Compiling percent-encoding v2.3.2
-   Compiling httparse v1.10.1
-   Compiling hashbrown v0.12.3
-   Compiling linux-raw-sys v0.11.0
-   Compiling regex-syntax v0.8.8
+   Compiling foldhash v0.1.5
+   Compiling either v1.15.0
+   Compiling wasmparser v0.240.0
+   Compiling colorchoice v1.0.4
    Compiling semver v1.0.27
-   Compiling anyhow v1.0.100
-   Compiling is_terminal_polyfill v1.70.2
    Compiling serde_json v1.0.145
-   Compiling anstream v0.6.21
+   Compiling anstyle-query v1.1.4
+   Compiling utf8_iter v1.0.4
+   Compiling wasm-encoder v0.240.0
+   Compiling anyhow v1.0.100
+   Compiling anstyle v1.0.13
+   Compiling hashbrown v0.12.3
+   Compiling crc32fast v1.5.0
+   Compiling httparse v1.10.1
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling linux-raw-sys v0.11.0
+   Compiling untrusted v0.9.0
+   Compiling regex-syntax v0.8.8
    Compiling regex-automata v0.4.13
-   Compiling form_urlencoded v1.2.2
+   Compiling anstream v0.6.21
    Compiling idna v1.1.0
    Compiling rayon v1.11.0
    Compiling hashbrown v0.15.5
+   Compiling form_urlencoded v1.2.2
    Compiling rand_chacha v0.3.1
    Compiling wasm-bindgen-shared v0.2.105
-   Compiling ryu v1.0.20
-   Compiling mime v0.3.17
-   Compiling leb128fmt v0.1.0
-   Compiling itoa v1.0.15
+   Compiling alloc-no-stdlib v2.0.4
    Compiling rustls v0.23.34
+   Compiling simd-adler32 v0.3.7
+   Compiling mime v0.3.17
+   Compiling ryu v1.0.20
+   Compiling leb128fmt v0.1.0
    Compiling fallible-iterator v0.2.0
+   Compiling itoa v1.0.15
+   Compiling safemem v0.3.3
+   Compiling fastrand v2.3.0
    Compiling powerfmt v0.2.0
    Compiling adler2 v2.0.1
-   Compiling simd-adler32 v0.3.7
-   Compiling fastrand v2.3.0
-   Compiling safemem v0.3.3
-   Compiling alloc-no-stdlib v2.0.4
-   Compiling alloc-stdlib v0.2.2
-   Compiling buf_redux v0.8.4
-   Compiling tempfile v3.23.0
    Compiling miniz_oxide v0.8.9
-   Compiling gimli v0.26.2
    Compiling deranged v0.5.5
-   Compiling id-arena v2.2.1
-   Compiling hashbrown v0.14.5
+   Compiling tempfile v3.23.0
+   Compiling gimli v0.26.2
+   Compiling buf_redux v0.8.4
+   Compiling alloc-stdlib v0.2.2
    Compiling rand v0.8.5
-   Compiling rustls-webpki v0.103.7
+   Compiling hashbrown v0.14.5
    Compiling url v2.5.7
+   Compiling id-arena v2.2.1
+   Compiling rustls-webpki v0.103.7
    Compiling regex v1.12.2
    Compiling walrus-macro v0.24.0
    Compiling webpki-roots v1.0.3
    Compiling twoway v0.1.8
    Compiling num_cpus v1.17.0
-   Compiling httpdate v1.0.3
-   Compiling subtle v2.6.1
-   Compiling leb128 v0.2.5
-   Compiling clap_lex v0.7.6
-   Compiling base64 v0.22.1
-   Compiling strsim v0.11.1
-   Compiling ascii v1.1.0
-   Compiling time-core v0.1.6
-   Compiling num-conv v0.1.0
    Compiling chunked_transfer v1.5.0
-   Compiling quick-error v1.2.3
-   Compiling iana-time-zone v0.1.64
    Compiling num_threads v0.1.7
+   Compiling base64 v0.22.1
+   Compiling httpdate v1.0.3
+   Compiling iana-time-zone v0.1.64
+   Compiling quick-error v1.2.3
+   Compiling strsim v0.11.1
+   Compiling leb128 v0.2.5
+   Compiling time-core v0.1.6
+   Compiling ascii v1.1.0
+   Compiling clap_lex v0.7.6
+   Compiling num-conv v0.1.0
+   Compiling subtle v2.6.1
    Compiling time v0.3.44
-   Compiling chrono v0.4.42
-   Compiling multipart v0.18.0
-   Compiling tiny_http v0.12.0
    Compiling clap_builder v4.5.50
+   Compiling tiny_http v0.12.0
    Compiling walrus v0.24.2
+   Compiling multipart v0.18.0
+   Compiling chrono v0.4.42
    Compiling threadpool v1.8.1
    Compiling webpki-roots v0.26.11
    Compiling env_filter v0.1.4
@@ -152,21 +476,663 @@
    Compiling brotli-decompressor v4.0.3
    Compiling clap_derive v4.5.49
    Compiling filetime v0.2.26
-   Compiling sha1_smol v1.0.1
+   Compiling jiff v0.2.15
    Compiling rustc-demangle v0.1.26
    Compiling base64 v0.13.1
-   Compiling jiff v0.2.15
-   Compiling env_logger v0.11.8
+   Compiling sha1_smol v1.0.1
    Compiling rouille v3.6.2
    Compiling wasm-bindgen-cli-support v0.2.105
+   Compiling env_logger v0.11.8
    Compiling clap v4.5.50
    Compiling ureq v2.12.1
    Compiling wasm-bindgen-cli v0.2.105
-    Finished `release` profile [optimized] target(s) in 5m 13s
+    Finished `release` profile [optimized] target(s) in 5m 28s
 warning: the following packages contain code that will be rejected by a future version of Rust: buf_redux v0.8.4, multipart v0.18.0
 note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
-   Replacing /root/.cargo/bin/wasm-bindgen
-   Replacing /root/.cargo/bin/wasm-bindgen-test-runner
-   Replacing /root/.cargo/bin/wasm2es6js
-    Replaced package `wasm-bindgen-cli v0.2.130` with `wasm-bindgen-cli v0.2.105` (executables `wasm-bindgen`, `wasm-bindgen-test-runner`, `wasm2es6js`)
-wasm-bindgen 0.2.105
+  Installing /root/.cargo/bin/wasm-bindgen
+  Installing /root/.cargo/bin/wasm-bindgen-test-runner
+  Installing /root/.cargo/bin/wasm2es6js
+   Installed package `wasm-bindgen-cli v0.2.105` (executables `wasm-bindgen`, `wasm-bindgen-test-runner`, `wasm2es6js`)
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded wasm-snip v0.4.0
+  Installing wasm-snip v0.4.0
+    Updating crates.io index
+warning: package `crossbeam-deque v0.7.1` in Cargo.lock is yanked in registry `crates-io`
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded atty v0.2.13
+  Downloaded ansi_term v0.11.0
+  Downloaded arrayvec v0.4.11
+  Downloaded backtrace v0.3.37
+  Downloaded aho-corasick v0.7.6
+  Downloaded unicode-segmentation v1.3.0
+  Downloaded textwrap v0.11.0
+  Downloaded unicode-xid v0.2.0
+  Downloaded cfg-if v0.1.9
+  Downloaded bitflags v1.1.0
+  Downloaded cc v1.0.45
+  Downloaded crossbeam-deque v0.7.1
+  Downloaded crossbeam-queue v0.1.2
+  Downloaded either v1.5.2
+  Downloaded failure_derive v0.1.5
+  Downloaded lazy_static v1.4.0
+  Downloaded libc v0.2.62
+  Downloaded memoffset v0.5.1
+  Downloaded nodrop v0.1.13
+  Downloaded num_cpus v1.10.1
+  Downloaded proc-macro2 v0.4.30
+  Downloaded quote v0.6.13
+  Downloaded rustc-demangle v0.1.16
+  Downloaded rustc_version v0.2.3
+  Downloaded scopeguard v1.0.0
+  Downloaded semver v0.9.0
+  Downloaded semver-parser v0.7.0
+  Downloaded strsim v0.8.0
+  Downloaded thread_local v0.3.6
+  Downloaded unicode-xid v0.1.0
+  Downloaded vec_map v0.8.1
+  Downloaded walrus-macro v0.12.0
+  Downloaded heck v0.3.1
+  Downloaded leb128 v0.2.4
+  Downloaded unicode-width v0.1.6
+  Downloaded failure v0.1.5
+  Downloaded synstructure v0.10.2
+  Downloaded quote v1.0.2
+  Downloaded log v0.4.8
+  Downloaded memchr v2.2.1
+  Downloaded crossbeam-utils v0.6.6
+  Downloaded crossbeam-epoch v0.7.2
+  Downloaded proc-macro2 v1.0.3
+  Downloaded rayon-core v1.6.0
+  Downloaded wasmparser v0.37.2
+  Downloaded rayon v1.2.0
+  Downloaded walrus v0.12.0
+  Downloaded syn v0.15.44
+  Downloaded clap v2.33.0
+  Downloaded syn v1.0.5
+  Downloaded regex v1.3.1
+  Downloaded regex-syntax v0.6.12
+  Downloaded backtrace-sys v0.1.31
+   Compiling libc v0.2.62
+   Compiling cfg-if v0.1.9
+   Compiling semver-parser v0.7.0
+   Compiling semver v0.9.0
+   Compiling lazy_static v1.4.0
+   Compiling rustc_version v0.2.3
+   Compiling proc-macro2 v0.4.30
+   Compiling memoffset v0.5.1
+   Compiling arrayvec v0.4.11
+   Compiling crossbeam-utils v0.6.6
+   Compiling unicode-xid v0.1.0
+   Compiling nodrop v0.1.13
+   Compiling cc v1.0.45
+   Compiling scopeguard v1.0.0
+   Compiling proc-macro2 v1.0.3
+   Compiling syn v0.15.44
+   Compiling backtrace-sys v0.1.31
+   Compiling crossbeam-epoch v0.7.2
+   Compiling quote v0.6.13
+   Compiling rayon-core v1.6.0
+   Compiling unicode-xid v0.2.0
+   Compiling crossbeam-deque v0.7.1
+   Compiling crossbeam-queue v0.1.2
+   Compiling num_cpus v1.10.1
+   Compiling failure_derive v0.1.5
+   Compiling memchr v2.2.1
+   Compiling syn v1.0.5
+   Compiling synstructure v0.10.2
+   Compiling quote v1.0.2
+   Compiling unicode-segmentation v1.3.0
+   Compiling log v0.4.8
+   Compiling bitflags v1.1.0
+   Compiling either v1.5.2
+   Compiling rustc-demangle v0.1.16
+   Compiling rayon v1.2.0
+   Compiling backtrace v0.3.37
+   Compiling heck v0.3.1
+   Compiling unicode-width v0.1.6
+   Compiling textwrap v0.11.0
+   Compiling aho-corasick v0.7.6
+   Compiling walrus-macro v0.12.0
+   Compiling failure v0.1.5
+   Compiling id-arena v2.2.1
+   Compiling atty v0.2.13
+   Compiling thread_local v0.3.6
+   Compiling wasmparser v0.37.2
+   Compiling vec_map v0.8.1
+   Compiling regex-syntax v0.6.12
+   Compiling leb128 v0.2.4
+   Compiling strsim v0.8.0
+   Compiling ansi_term v0.11.0
+   Compiling clap v2.33.0
+   Compiling walrus v0.12.0
+   Compiling regex v1.3.1
+   Compiling wasm-snip v0.4.0
+    Finished `release` profile [optimized] target(s) in 1m 13s
+  Installing /root/.cargo/bin/wasm-snip
+   Installed package `wasm-snip v0.4.0` (executable `wasm-snip`)
+⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙
+added 1 package in 2s
+⠙/content/scramjet/packages/core
+$ cd rewriter/wasm/ && bash build.sh && cd ../../
+warning: Cargo.toml: `lints.clippy.cast-possible-truncation` is deprecated in favor of `lints.clippy.cast_possible_truncation` and will not work in a future edition
+warning: Cargo.toml: `lints.clippy.missing-errors-doc` is deprecated in favor of `lints.clippy.missing_errors_doc` and will not work in a future edition
+warning: Cargo.toml: `lints.clippy.must-use-candidate` is deprecated in favor of `lints.clippy.must_use_candidate` and will not work in a future edition
+warning: Cargo.toml: `lints.clippy.struct-excessive-bools` is deprecated in favor of `lints.clippy.struct_excessive_bools` and will not work in a future edition
+warning: workspace (manifest) generated 4 warnings
+warning: wasm/Cargo.toml: `lints.clippy.cast-possible-truncation` is deprecated in favor of `lints.clippy.cast_possible_truncation` and will not work in a future edition
+warning: wasm/Cargo.toml: `lints.clippy.missing-errors-doc` is deprecated in favor of `lints.clippy.missing_errors_doc` and will not work in a future edition
+warning: wasm/Cargo.toml: `lints.clippy.must-use-candidate` is deprecated in favor of `lints.clippy.must_use_candidate` and will not work in a future edition
+warning: wasm/Cargo.toml: `lints.clippy.struct-excessive-bools` is deprecated in favor of `lints.clippy.struct_excessive_bools` and will not work in a future edition
+warning: `wasm` (manifest) generated 4 warnings
+warning: js/Cargo.toml: `lints.clippy.cast-possible-truncation` is deprecated in favor of `lints.clippy.cast_possible_truncation` and will not work in a future edition
+warning: js/Cargo.toml: `lints.clippy.missing-errors-doc` is deprecated in favor of `lints.clippy.missing_errors_doc` and will not work in a future edition
+warning: js/Cargo.toml: `lints.clippy.must-use-candidate` is deprecated in favor of `lints.clippy.must_use_candidate` and will not work in a future edition
+warning: js/Cargo.toml: `lints.clippy.struct-excessive-bools` is deprecated in favor of `lints.clippy.struct_excessive_bools` and will not work in a future edition
+warning: `js` (manifest) generated 4 warnings
+warning: coverage-macro/Cargo.toml: `lints.clippy.cast-possible-truncation` is deprecated in favor of `lints.clippy.cast_possible_truncation` and will not work in a future edition
+warning: coverage-macro/Cargo.toml: `lints.clippy.missing-errors-doc` is deprecated in favor of `lints.clippy.missing_errors_doc` and will not work in a future edition
+warning: coverage-macro/Cargo.toml: `lints.clippy.must-use-candidate` is deprecated in favor of `lints.clippy.must_use_candidate` and will not work in a future edition
+warning: coverage-macro/Cargo.toml: `lints.clippy.struct-excessive-bools` is deprecated in favor of `lints.clippy.struct_excessive_bools` and will not work in a future edition
+warning: `coverage-macro` (manifest) generated 4 warnings
+warning: native/Cargo.toml: `lints.clippy.cast-possible-truncation` is deprecated in favor of `lints.clippy.cast_possible_truncation` and will not work in a future edition
+warning: native/Cargo.toml: `lints.clippy.missing-errors-doc` is deprecated in favor of `lints.clippy.missing_errors_doc` and will not work in a future edition
+warning: native/Cargo.toml: `lints.clippy.must-use-candidate` is deprecated in favor of `lints.clippy.must_use_candidate` and will not work in a future edition
+warning: native/Cargo.toml: `lints.clippy.struct-excessive-bools` is deprecated in favor of `lints.clippy.struct_excessive_bools` and will not work in a future edition
+warning: `native` (manifest) generated 4 warnings
+warning: transform/Cargo.toml: `lints.clippy.cast-possible-truncation` is deprecated in favor of `lints.clippy.cast_possible_truncation` and will not work in a future edition
+warning: transform/Cargo.toml: `lints.clippy.missing-errors-doc` is deprecated in favor of `lints.clippy.missing_errors_doc` and will not work in a future edition
+warning: transform/Cargo.toml: `lints.clippy.must-use-candidate` is deprecated in favor of `lints.clippy.must_use_candidate` and will not work in a future edition
+warning: transform/Cargo.toml: `lints.clippy.struct-excessive-bools` is deprecated in favor of `lints.clippy.struct_excessive_bools` and will not work in a future edition
+warning: `transform` (manifest) generated 4 warnings
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded cfg-if v1.0.1
+  Downloaded castaway v0.2.4
+  Downloaded allocator-api2 v0.2.21
+  Downloaded compact_str v0.9.0
+  Downloaded bumpalo v3.19.0
+  Downloaded unicode-linebreak v0.1.5
+  Downloaded phf_generator v0.13.1
+  Downloaded nonmax v0.5.5
+  Downloaded oxc_diagnostics v0.95.0
+  Downloaded smawk v0.3.2
+  Downloaded phf_shared v0.13.1
+  Downloaded rustc-hash v2.1.1
+  Downloaded oxc_ast_macros v0.95.0
+  Downloaded seq-macro v0.3.6
+  Downloaded wasm-bindgen-macro v0.2.105
+  Downloaded cow-utils v0.1.3
+  Downloaded siphasher v1.0.1
+  Downloaded oxc_data_structures v0.95.0
+  Downloaded phf v0.13.1
+  Downloaded rustversion v1.0.21
+  Downloaded oxc-miette-derive v2.5.1
+  Downloaded oxc_index v4.1.0
+  Downloaded oxc_span v0.95.0
+  Downloaded static_assertions v1.1.0
+  Downloaded thiserror v2.0.17
+  Downloaded oxc v0.95.0
+  Downloaded oxc_syntax v0.95.0
+  Downloaded phf_macros v0.13.1
+  Downloaded thiserror-impl v2.0.17
+  Downloaded num-integer v0.1.46
+  Downloaded owo-colors v4.2.2
+  Downloaded oxc_estree v0.95.0
+  Downloaded quote v1.0.40
+  Downloaded wasm-bindgen v0.2.105
+  Downloaded oxc_ast_visit v0.95.0
+  Downloaded textwrap v0.16.2
+  Downloaded unicode-id-start v1.3.1
+  Downloaded dragonbox_ecma v0.0.5
+  Downloaded oxc_ecmascript v0.95.0
+  Downloaded unicode-ident v1.0.18
+  Downloaded oxc_regular_expression v0.95.0
+  Downloaded js-sys v0.3.82
+  Downloaded wasm-bindgen-macro-support v0.2.105
+  Downloaded proc-macro2 v1.0.95
+  Downloaded serde v1.0.219
+  Downloaded num-bigint v0.4.6
+  Downloaded oxc_allocator v0.95.0
+  Downloaded memchr v2.7.5
+  Downloaded oxc-miette v2.5.1
+  Downloaded unicode-segmentation v1.12.0
+  Downloaded oxc_parser v0.95.0
+  Downloaded oxc_ast v0.95.0
+  Downloaded syn v2.0.104
+  Downloaded unicode-width v0.2.1
+  Downloaded web-sys v0.3.82
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded rustc-demangle v0.1.28
+  Downloaded dlmalloc v0.2.14
+  Downloaded foldhash v0.2.0
+  Downloaded hashbrown v0.17.1
+  Downloaded getopts v0.2.24
+  Downloaded rustc-literal-escaper v0.0.8
+  Downloaded libc v0.2.191
+   Compiling compiler_builtins v0.1.160 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins)
+   Compiling core v0.0.0 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core)
+   Compiling libc v0.2.191
+   Compiling std v0.0.0 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std)
+   Compiling unicode-ident v1.0.18
+   Compiling proc-macro2 v1.0.95
+   Compiling quote v1.0.40
+   Compiling syn v2.0.104
+   Compiling rustversion v1.0.21
+   Compiling siphasher v1.0.1
+   Compiling phf_shared v0.13.1
+   Compiling thiserror v2.0.17
+   Compiling owo-colors v4.2.2
+   Compiling thiserror-impl v2.0.17
+   Compiling oxc-miette-derive v2.5.1
+   Compiling fastrand v2.3.0
+   Compiling phf_generator v0.13.1
+   Compiling phf v0.13.1
+   Compiling serde v1.0.219
+   Compiling oxc_ast_macros v0.95.0
+   Compiling phf_macros v0.13.1
+   Compiling autocfg v1.5.0
+   Compiling rustc-std-workspace-core v1.99.0 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/rustc-std-workspace-core)
+   Compiling alloc v0.0.0 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc)
+   Compiling unwind v0.0.0 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/unwind)
+   Compiling cfg-if v1.0.4
+   Compiling dlmalloc v0.2.14
+   Compiling rustc-demangle v0.1.28
+   Compiling rustc-literal-escaper v0.0.8
+   Compiling wasm-bindgen-shared v0.2.105
+   Compiling num-traits v0.2.19
+   Compiling rustc-std-workspace-alloc v1.99.0 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/rustc-std-workspace-alloc)
+   Compiling std_detect v0.1.5 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std_detect)
+   Compiling hashbrown v0.17.1
+   Compiling panic_abort v0.0.0 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/panic_abort)
+   Compiling panic_unwind v0.0.0 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/panic_unwind)
+   Compiling bumpalo v3.19.0
+   Compiling wasm-bindgen-macro-support v0.2.105
+   Compiling proc_macro v0.0.0 (/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/proc_macro)
+   Compiling cfg-if v1.0.1
+   Compiling unicode-linebreak v0.1.5
+   Compiling unicode-width v0.2.1
+   Compiling allocator-api2 v0.2.21
+   Compiling smawk v0.3.2
+   Compiling textwrap v0.16.2
+   Compiling unicode-segmentation v1.12.0
+   Compiling oxc-miette v2.5.1
+   Compiling hashbrown v0.16.0
+   Compiling castaway v0.2.4
+   Compiling ryu v1.0.20
+   Compiling static_assertions v1.1.0
+   Compiling oxc_data_structures v0.95.0
+   Compiling rustc-hash v2.1.1
+   Compiling itoa v1.0.15
+   Compiling compact_str v0.9.0
+   Compiling oxc_allocator v0.95.0
+   Compiling oxc_estree v0.95.0
+   Compiling cow-utils v0.1.3
+   Compiling oxc_span v0.95.0
+   Compiling nonmax v0.5.5
+   Compiling bitflags v2.10.0
+   Compiling unicode-id-start v1.3.1
+   Compiling percent-encoding v2.3.2
+   Compiling oxc_diagnostics v0.95.0
+   Compiling dragonbox_ecma v0.0.5
+   Compiling oxc_regular_expression v0.95.0
+   Compiling oxc_index v4.1.0
+   Compiling oxc_syntax v0.95.0
+   Compiling oxc_ast v0.95.0
+   Compiling num-integer v0.1.46
+   Compiling num-bigint v0.4.6
+   Compiling memchr v2.7.5
+   Compiling wasm-bindgen v0.2.105
+   Compiling seq-macro v0.3.6
+   Compiling oxc_ecmascript v0.95.0
+   Compiling oxc_parser v0.95.0
+   Compiling oxc_ast_visit v0.95.0
+   Compiling once_cell v1.21.3
+   Compiling wasm-bindgen-macro v0.2.105
+   Compiling oxc v0.95.0
+   Compiling smallvec v1.15.1
+   Compiling transform v0.1.0 (/content/scramjet/packages/core/rewriter/transform)
+   Compiling js-sys v0.3.82
+   Compiling coverage-macro v0.1.0 (/content/scramjet/packages/core/rewriter/coverage-macro)
+warning: variable does not need to be mutable
+  --> coverage-macro/src/lib.rs:75:13
+   |
+75 |     let mut findings = Findings::default();
+   |         ----^^^^^^^^
+   |         |
+   |         help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `findings`
+  --> coverage-macro/src/lib.rs:75:9
+   |
+75 |     let mut findings = Findings::default();
+   |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_findings`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `covers` is never used
+  --> coverage-macro/src/analyze.rs:51:12
+   |
+41 | impl Covered {
+   | ------------ method in this implementation
+...
+51 |     pub fn covers(&self, name: &str) -> bool {
+   |            ^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: fields `missing` and `bad_skips` are never read
+  --> coverage-macro/src/analyze.rs:67:9
+   |
+66 | pub struct Findings {
+   |            -------- fields in this struct
+67 |     pub missing: Vec<MissingCover>,
+   |         ^^^^^^^
+68 |     pub bad_skips: Vec<BadSkip>,
+   |         ^^^^^^^^^
+
+warning: fields `field`, `field_ty`, and `path_label` are never read
+  --> coverage-macro/src/analyze.rs:73:9
+   |
+72 | pub struct MissingCover {
+   |            ------------ fields in this struct
+73 |     pub field: String,
+   |         ^^^^^
+74 |     pub field_ty: String,
+   |         ^^^^^^^^
+75 |     pub path_label: String,
+   |         ^^^^^^^^^^
+   |
+note: `field`, `field_ty`, and `path_label` are used in the expansion of the derive macro `Clone`, but this is intentionally ignored during dead code analysis
+  --> coverage-macro/src/analyze.rs:71:10
+   |
+71 | #[derive(Clone, Debug)]
+   |          ^^^^^
+note: `field`, `field_ty`, and `path_label` are used in the expansion of the derive macro `Debug`, but this is intentionally ignored during dead code analysis
+  --> coverage-macro/src/analyze.rs:71:17
+   |
+71 | #[derive(Clone, Debug)]
+   |                 ^^^^^
+
+warning: fields `field`, `field_ty`, and `site_repr` are never read
+  --> coverage-macro/src/analyze.rs:80:9
+   |
+79 | pub struct BadSkip {
+   |            ------- fields in this struct
+80 |     pub field: String,
+   |         ^^^^^
+81 |     pub field_ty: String,
+   |         ^^^^^^^^
+82 |     pub site_repr: String,
+   |         ^^^^^^^^^
+   |
+note: `field`, `field_ty`, and `site_repr` are used in the expansion of the derive macro `Clone`, but this is intentionally ignored during dead code analysis
+  --> coverage-macro/src/analyze.rs:78:10
+   |
+78 | #[derive(Clone, Debug)]
+   |          ^^^^^
+note: `field`, `field_ty`, and `site_repr` are used in the expansion of the derive macro `Debug`, but this is intentionally ignored during dead code analysis
+  --> coverage-macro/src/analyze.rs:78:17
+   |
+78 | #[derive(Clone, Debug)]
+   |                 ^^^^^
+
+warning: function `analyze` is never used
+  --> coverage-macro/src/analyze.rs:86:8
+   |
+86 | pub fn analyze(body: &Block, _findings: &mut Findings, graph: &AstGraph) -> Vec<Witness> {
+   |        ^^^^^^^
+
+warning: function `analyze_with_helpers` is never used
+  --> coverage-macro/src/analyze.rs:92:8
+   |
+92 | pub fn analyze_with_helpers(
+   |        ^^^^^^^^^^^^^^^^^^^^
+
+warning: function `apply_origin_to_cov` is never used
+   --> coverage-macro/src/analyze.rs:984:4
+    |
+984 | fn apply_origin_to_cov(
+    |    ^^^^^^^^^^^^^^^^^^^
+
+warning: function `lookup` is never used
+   --> coverage-macro/src/ast_table.rs:925:8
+    |
+925 | pub fn lookup(name: &str) -> Option<&'static NodeDef> {
+    |        ^^^^^^
+
+warning: method `lookup` is never used
+  --> coverage-macro/src/helper_index.rs:72:12
+   |
+71 | impl HelperIndex {
+   | ---------------- method in this implementation
+72 |     pub fn lookup(&self, name: &str) -> Option<&HelperInfo> {
+   |            ^^^^^^
+
+warning: associated function `unknown` is never used
+   --> coverage-macro/src/helper_index.rs:347:12
+    |
+346 | impl Binding {
+    | ------------ associated function in this implementation
+347 |     pub fn unknown() -> Self {
+    |            ^^^^^^^
+
+warning: method `get_binding` is never used
+   --> coverage-macro/src/helper_index.rs:381:12
+    |
+364 | impl OriginMap {
+    | -------------- method in this implementation
+...
+381 |     pub fn get_binding(&self, name: &str) -> Binding {
+    |            ^^^^^^^^^^^
+
+warning: fields `child_ty` and `card` are never read
+  --> coverage-macro/src/witness.rs:17:9
+   |
+14 |     Field {
+   |     ----- fields in this variant
+...
+17 |         child_ty: &'static str,
+   |         ^^^^^^^^
+18 |         card: Cardinality,
+   |         ^^^^
+   |
+note: `child_ty` and `card` are used in the expansion of the derive macro `Clone`, but this is intentionally ignored during dead code analysis
+  --> coverage-macro/src/witness.rs:11:10
+   |
+11 | #[derive(Clone, Debug)]
+   |          ^^^^^
+note: `child_ty` and `card` are used in the expansion of the derive macro `Debug`, but this is intentionally ignored during dead code analysis
+  --> coverage-macro/src/witness.rs:11:17
+   |
+11 | #[derive(Clone, Debug)]
+   |                 ^^^^^
+
+warning: method `target_ty` is never used
+  --> coverage-macro/src/witness.rs:27:8
+   |
+26 | impl Step {
+   | --------- method in this implementation
+27 |     fn target_ty(&self) -> &'static str {
+   |        ^^^^^^^^^
+
+warning: function `find_witness` is never used
+   --> coverage-macro/src/witness.rs:102:8
+    |
+102 | pub fn find_witness(
+    |        ^^^^^^^^^^^^
+
+warning: function `bfs_to_ident` is never used
+   --> coverage-macro/src/witness.rs:384:4
+    |
+384 | fn bfs_to_ident(graph: &AstGraph, start_ty: &'static str) -> Option<Vec<Step>> {
+    |    ^^^^^^^^^^^^
+
+warning: function `dfs_witness_through_hints` is never used
+   --> coverage-macro/src/witness.rs:428:4
+    |
+428 | fn dfs_witness_through_hints(
+    |    ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `coverage-macro` (lib) generated 18 warnings (run `cargo fix --lib -p coverage-macro` to apply 2 suggestions)
+   Compiling js v0.1.0 (/content/scramjet/packages/core/rewriter/js)
+warning: coverage_checked: `ObjectExpression.properties` (type `ObjectPropertyKind` (Vec)) is not covered on path #0 (return).
+This may lead to a runtime escape.
+Minimal program that can reach this path (may not actually demonstrate the escape):
+({k: location})
+
+warning: coverage_checked: `Function.params` (type `FormalParameters`) is not covered on path #1 (fall-through).
+This may lead to a runtime escape.
+Minimal program that can reach this path (may not actually demonstrate the escape):
+function f([x=location])
+
+warning: coverage_checked: `ArrowFunctionExpression.params` (type `FormalParameters`) is not covered on path #1 (fall-through).
+This may lead to a runtime escape.
+Minimal program that can reach this path (may not actually demonstrate the escape):
+(([x=location]) => {})
+
+warning: coverage_checked: `ForOfStatement.left` (type `ForStatementLeft`) is not covered on path #0 (fall-through).
+This may lead to a runtime escape.
+Minimal program that can reach this path (may not actually demonstrate the escape):
+for(location.#p of 0);
+
+warning: coverage_checked: `ForInStatement.left` (type `ForStatementLeft`) is not covered on path #0 (fall-through).
+This may lead to a runtime escape.
+Minimal program that can reach this path (may not actually demonstrate the escape):
+for(location.#p in 0);
+
+warning: coverage_checked: `AssignmentExpression.left` (type `AssignmentTarget`) is not covered on path #0 (fall-through).
+This may lead to a runtime escape.
+Minimal program that can reach this path (may not actually demonstrate the escape):
+(location.#p=0)
+
+warning: unused imports: `AssignmentTargetPropertyIdentifier`, `BindingProperty`, `FormalParameter`, `ObjectPattern`, `PrivateIdentifier`, `ReturnStatement`, `ThisExpression`, and `VariableDeclarator`
+  --> js/src/visitor.rs:8:29
+   |
+ 8 |         AssignmentTargetProperty, AssignmentTargetPropertyIdentifier, BindingPattern,
+   |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 9 |         BindingPatternKind, BindingProperty, CallExpression, ComputedMemberExpression,
+   |                             ^^^^^^^^^^^^^^^
+10 |         DebuggerStatement, ExportAllDeclaration, ExportNamedDeclaration, Expression, ForStatement,
+11 |         ForStatementInit, ForStatementLeft, FormalParameter, FunctionBody, IdentifierReference,
+   |                                             ^^^^^^^^^^^^^^^
+12 |         ImportDeclaration, ImportExpression, MemberExpression, MetaProperty, NewExpression,
+13 |         ObjectAssignmentTarget, ObjectExpression, ObjectPattern, ObjectPropertyKind,
+   |                                                   ^^^^^^^^^^^^^
+14 |         PrivateIdentifier, PropertyKey, ReturnStatement, SimpleAssignmentTarget, Statement,
+   |         ^^^^^^^^^^^^^^^^^               ^^^^^^^^^^^^^^^
+15 |         StringLiteral, ThisExpression, UnaryExpression, UnaryOperator, UpdateExpression,
+   |                        ^^^^^^^^^^^^^^
+16 |         VariableDeclaration, VariableDeclarationKind, VariableDeclarator,
+   |                                                       ^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable does not need to be mutable
+   --> js/src/visitor.rs:180:14
+    |
+180 |                     let mut target;
+    |                         ----^^^^^^
+    |                         |
+    |                         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: variant `SetRealmFn` is never constructed
+  --> js/src/rewrite.rs:33:2
+   |
+17 | pub(crate) enum RewriteType<'alloc: 'data, 'data> {
+   |                 ----------- variant in this enum
+...
+33 |     SetRealmFn,
+   |     ^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `rewrite_ident` is never used
+  --> js/src/visitor.rs:72:5
+   |
+51 | / impl<'data, E> Visitor<'_, 'data, E>
+52 | | where
+53 | |     E: UrlRewriter,
+   | |___________________- method in this implementation
+...
+72 |       fn rewrite_ident(&mut self, name: &Atom, span: Span) {
+   |          ^^^^^^^^^^^^^
+
+warning: `js` (lib) generated 4 warnings (run `cargo fix --lib -p js` to apply 2 suggestions)
+   Compiling web-sys v0.3.82
+   Compiling wasm v0.1.0 (/content/scramjet/packages/core/rewriter/wasm)
+warning: unused import: `WasmUrlRewriter`
+  --> wasm/src/lib.rs:10:18
+   |
+10 | use crate::jsr::{WasmUrlRewriter, get_url_rewriter, scramtag};
+   |                  ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `get_obj` and `get_str`
+  --> wasm/src/jsr.rs:14:3
+   |
+14 |      get_obj, get_str, set_obj,
+   |      ^^^^^^^  ^^^^^^^
+
+warning: function `get_obj` is never used
+  --> wasm/src/lib.rs:22:4
+   |
+22 | fn get_obj(obj: &JsValue, k: &'static str) -> Result<JsValue> {
+   |    ^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `wasm` (lib) generated 3 warnings (run `cargo fix --lib -p wasm` to apply 2 suggestions)
+    Finished `release` profile [optimized + debuginfo] target(s) in 2m 26s
+Rewriter Build Complete!
+$ cd ../.. && rspack build --mode production
+ExternalStubPlugin: wrote scramjet-external.mjs (51 exports → globalThis.$scramjet)
+ExternalStubPlugin: wrote controller-external.mjs (5 exports → globalThis.$scramjetController)
+scramjet-iife:
+  scramjet-iife compiled successfully in 8.58 s
+
+scramjet-iife-bundled:
+  scramjet-iife-bundled compiled successfully in 3.50 s
+
+scramjet-esmodule:
+  scramjet-esmodule compiled successfully in 3.10 s
+
+scramjet-esmodule-bundled:
+  scramjet-esmodule-bundled compiled successfully in 3.50 s
+
+scramjet-controller:
+  scramjet-controller compiled successfully in 3.61 s
+
+scramjet-utils-iife:
+  scramjet-utils-iife compiled successfully in 6.04 s
+
+scramjet-utils-esmodule:
+  scramjet-utils-esmodule compiled successfully in 539 ms
+
+scramjet-bootstrap:
+  scramjet-bootstrap compiled successfully in 6.66 s
+
+scramjet-bootstrap-static:
+  scramjet-bootstrap-static compiled successfully in 523 ms
+
+create-proxy-app:
+  WARNING in ./node_modules/.pnpm/mlly@1.8.0/node_modules/mlly/dist/index.mjs
+    ⚠ Critical dependency: the request of a dependency is an expression
+        ╭─[2508:16]
+   2506 │   const transformed = await transformModule(code, options);
+   2507 │   const dataURL = toDataURL(transformed);
+   2508 │   return import(dataURL).catch((error) => {
+        ·                 ───────
+   2509 │     error.stack = error.stack.replace(
+   2510 │       new RegExp(dataURL, "g"),
+        ╰────
+  
+
+  create-proxy-app compiled with 1 warning in 6.09 s
