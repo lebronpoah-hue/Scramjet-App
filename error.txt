@@ -1,641 +1,172 @@
-Cloning into 'scramjet'...
-remote: Enumerating objects: 18525, done.
-remote: Counting objects: 100% (44/44), done.
-remote: Compressing objects: 100% (31/31), done.
-remote: Total 18525 (delta 24), reused 16 (delta 13), pack-reused 18481 (from 3)
-Receiving objects: 100% (18525/18525), 19.21 MiB | 11.02 MiB/s, done.
-Resolving deltas: 100% (11845/11845), done.
-/content/scramjet
-info: downloading installer
-info: profile set to default
-info: default host tuple is x86_64-unknown-linux-gnu
-info: syncing channel updates for stable-x86_64-unknown-linux-gnu
-info: latest update on 2026-11-12 for version 1.100.0 (0ef1bc386 2026-11-09)
-info: downloading 6 components
-        rustc installed                       81.02 MiB                               rustfmt installed                        2.41 MiB                         info: default toolchain set to stable-x86_64-unknown-linux-gnu
-
-  stable-x86_64-unknown-linux-gnu installed - rustc 1.100.0 (0ef1bc386 2026-11-09)
-
-
-Rust is installed now. Great!
-
-To get started you may need to restart your current shell.
-This would reload your PATH environment variable to include
-Cargo's bin directory ($HOME/.cargo/bin).
-
-To configure your current shell, you need to source the
-corresponding env file under $HOME/.cargo.
-
-Consider running the right command for your shell (note the leading DOT):
-. "$HOME/.cargo/env" # For sh/ash/dash/pdksh/bash
-cargo:rerun-if-env-changed=CC_x86_64-unknown-linux-gnu
-CC_x86_64-unknown-linux-gnu = None
-cargo:rerun-if-env-changed=CC_x86_64_unknown_linux_gnu
-CC_x86_64_unknown_linux_gnu = None
-cargo:rerun-if-env-changed=HOST_CC
-HOST_CC = None
-cargo:rerun-if-env-changed=CC
-CC = None
-cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
-cargo:rerun-if-env-changed=CPATH
-cargo:rerun-if-env-changed=C_INCLUDE_PATH
-cargo:rerun-if-env-changed=CPLUS_INCLUDE_PATH
-cargo:rerun-if-env-changed=OBJC_INCLUDE_PATH
-cargo:rerun-if-env-changed=OBJCPLUS_INCLUDE_PATH
-cargo:rerun-if-env-changed=COMPILER_PATH
-cargo:rerun-if-env-changed=SOURCE_DATE_EPOCH
-cargo:rerun-if-env-changed=GCC_EXEC_PREFIX
-cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
-CRATE_CC_NO_DEFAULTS = None
-cargo:rerun-if-env-changed=CFLAGS
-CFLAGS = None
-cargo:rerun-if-env-changed=HOST_CFLAGS
-HOST_CFLAGS = None
-cargo:rerun-if-env-changed=CFLAGS_x86_64_unknown_linux_gnu
-CFLAGS_x86_64_unknown_linux_gnu = None
-cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-linux-gnu
-CFLAGS_x86_64-unknown-linux-gnu = None
-info: downloading component rust-std
-rust-std-wasm32-unknown-unknown installed                       21.95 MiB       ⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙⠹⠸⠼⠴⠦
-added 2 packages in 4s
-Scope: all 9 workspace projects
-? Verifying lockfile against supply-chain policies (753 entries)...
-Update available! 12.17.0 → 12.21.0.
-Changelog: https://pnpm.io/v/12.21.0
-To update, run: curl -fsSL https://get.pnpm.io/install.sh | sh -
-Progress: resolved 693, reused 0, downloaded 0, added 0
-Downloading monaco-editor@0.54.0: 0.00 B/16.71 MB
-Packages are hard linked from the content-addressable store to the virtual store.
-  Content-addressable store is at: /root/.local/share/pnpm/store/v11
-  Virtual store is at:             node_modules/.pnpm
-Progress: resolved 693, reused 0, downloaded 1, added 0
-Downloading monaco-editor@0.54.0: 614.00 B/16.71 MB
-Progress: resolved 693, reused 0, downloaded 40, added 39
-Progress: resolved 693, reused 0, downloaded 80, added 79
-Progress: resolved 693, reused 0, downloaded 105, added 104
-Downloading monaco-editor@0.54.0: 180.22 kB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 155, added 155
-Progress: resolved 693, reused 0, downloaded 170, added 171
-Downloading monaco-editor@0.54.0: 1.08 MB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 194, added 192
-Progress: resolved 693, reused 0, downloaded 204, added 203
-Downloading @rspack/binding-linux-x64-gnu@1.6.7: 0.00 B/18.60 MB
-Progress: resolved 693, reused 0, downloaded 217, added 217
-Downloading monaco-editor@0.54.0: 1.73 MB/16.71 MB
-Downloading @rspack/binding-linux-x64-gnu@1.6.7: 4.09 kB/18.60 MB
-Progress: resolved 693, reused 0, downloaded 231, added 232
-Progress: resolved 693, reused 0, downloaded 260, added 259
-Downloading @rspack/binding-linux-x64-gnu@1.6.7: 716.79 kB/18.60 MB
-Progress: resolved 693, reused 0, downloaded 288, added 288
-Downloading monaco-editor@0.54.0: 2.67 MB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 300, added 300
-Downloading @rspack/binding-linux-x64-gnu@1.6.7: 2.35 MB/18.60 MB
-Progress: resolved 693, reused 0, downloaded 301, added 301
-Downloading monaco-editor@0.54.0: 4.39 MB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 336, added 336
-Downloading @rspack/binding-linux-x64-gnu@1.6.7: 3.63 MB/18.60 MB
-Progress: resolved 693, reused 0, downloaded 373, added 369
-Downloading monaco-editor@0.54.0: 6.07 MB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 428, added 427
-✓ Lockfile passes supply-chain policies (753 entries in 4s)
-Lockfile is up to date, resolution step is skipped
-Progress: resolved 693, reused 0, downloaded 439, added 441
-Downloading monaco-editor@0.54.0: 6.07 MB/16.71 MB
-Downloading @rspack/binding-linux-x64-gnu@1.6.7: 9.45 MB/18.60 MB
-Progress: resolved 693, reused 0, downloaded 460, added 456
-Downloading monaco-editor@0.54.0: 8.22 MB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 498, added 500
-Downloading monaco-editor@0.54.0: 10.11 MB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 514, added 511
-Progress: resolved 693, reused 0, downloaded 560, added 560
-Progress: resolved 693, reused 0, downloaded 596, added 598
-Downloading monaco-editor@0.54.0: 11.35 MB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 623, added 624
-Progress: resolved 693, reused 0, downloaded 646, added 647
-Downloading monaco-editor@0.54.0: 12.38 MB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 662, added 663
-Progress: resolved 693, reused 0, downloaded 668, added 665
-Downloading monaco-editor@0.54.0: 13.74 MB/16.71 MB
-Downloading @rspack/binding-linux-x64-gnu@1.6.7: 17.81 MB/18.60 MB
-Progress: resolved 693, reused 0, downloaded 677, added 676
-Downloading @rspack/binding-linux-x64-gnu@1.6.7: 18.60 MB/18.60 MB, done
-Progress: resolved 693, reused 0, downloaded 680, added 682
-Downloading monaco-editor@0.54.0: 15.46 MB/16.71 MB
-Progress: resolved 693, reused 0, downloaded 682, added 683
-Progress: resolved 693, reused 0, downloaded 684, added 685
-Progress: resolved 693, reused 0, downloaded 687, added 688
-Downloading monaco-editor@0.54.0: 16.71 MB/16.71 MB, done
-Progress: resolved 693, reused 0, downloaded 691, added 692
-Packages: +693
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Progress: resolved 693, reused 0, downloaded 691, added 693
-Progress: resolved 693, reused 0, downloaded 691, added 693, done
-node_modules/.pnpm/bufferutil@4.0.9/node_modules/bufferutil: Running install script...
-node_modules/.pnpm/core-js@3.47.0/node_modules/core-js: Running postinstall script...
-node_modules/.pnpm/esbuild@0.27.2/node_modules/esbuild: Running postinstall script...
-node_modules/.pnpm/esbuild@0.27.2/node_modules/esbuild: Running postinstall script, done in 150ms
-node_modules/.pnpm/core-js@3.47.0/node_modules/core-js: Running postinstall script, done in 176ms
-node_modules/.pnpm/bufferutil@4.0.9/node_modules/bufferutil: Running install script, done in 293ms
-
-dependencies:
-+ prettier 3.6.2
-
-devDependencies:
-+ @fastify/deepmerge 3.2.1
-+ @mercuryworkshop/wisp-js 0.4.1
-+ @rsdoctor/rspack-plugin 1.4.0
-+ @rspack/cli 1.5.8
-+ @rspack/core 1.6.7
-+ ava 6.4.1
-+ chafa-wasm 0.3.1
-+ chalk 5.6.2
-+ eslint 10.2.0
-+ glob 13.0.6
-+ rspack-merge 1.0.1
-+ ts-checker-rspack-plugin 1.1.6
-+ tsc-alias 1.8.16
-+ vite 7.3.0
-
-Done in 8.6s using pnpm v12.17.0
+/usr/lib/python3/dist-packages/numpy/core
+/content/scramjet/packages/core
     Updating crates.io index
- Downloading crates ...
-  Downloaded wasm-bindgen-cli v0.2.130
-  Installing wasm-bindgen-cli v0.2.130
+  Installing wasm-bindgen-cli v0.2.105
     Updating crates.io index
     Updating crates.io index
- Downloading crates ...
-  Downloaded adler2 v2.0.1
-  Downloaded alloc-no-stdlib v2.0.4
-  Downloaded alloc-stdlib v0.2.4
-  Downloaded anstream v1.0.0
-  Downloaded crossbeam-deque v0.8.8
-  Downloaded aho-corasick v1.1.5
-  Downloaded anstyle v1.0.14
-  Downloaded buf_redux v0.8.4
-  Downloaded chunked_transfer v1.5.0
-  Downloaded clap_derive v4.6.7
-  Downloaded crossbeam-epoch v0.9.21
-  Downloaded cfg-if v1.0.5
-  Downloaded colorchoice v1.0.5
-  Downloaded defmt-parser v1.1.0
-  Downloaded env_filter v2.0.0
-  Downloaded equivalent v1.0.3
-  Downloaded errno v0.3.14
-  Downloaded leb128fmt v0.1.0
-  Downloaded clap_lex v1.1.1
-  Downloaded anstyle-query v1.1.5
-  Downloaded anstyle-parse v1.0.0
-  Downloaded either v1.19.0
-  Downloaded form_urlencoded v1.2.2
-  Downloaded id-arena v2.3.0
-  Downloaded leb128 v0.2.7
-  Downloaded mime v0.3.17
-  Downloaded num-conv v0.2.2
-  Downloaded percent-encoding v2.3.2
-  Downloaded potential_utf v0.1.6
-  Downloaded rand_chacha v0.3.1
-  Downloaded ascii v1.1.0
-  Downloaded bitflags v1.3.2
-  Downloaded defmt-macros v1.2.0
-  Downloaded deranged v0.5.9
-  Downloaded displaydoc v0.2.7
-  Downloaded fallible-iterator v0.3.0
-  Downloaded filetime v0.2.29
-  Downloaded heck v0.5.0
-  Downloaded idna_adapter v1.2.2
-  Downloaded is_terminal_polyfill v1.70.2
-  Downloaded num_threads v0.1.8
-  Downloaded fastrand v2.5.0
-  Downloaded itoa v1.0.18
-  Downloaded num_cpus v1.17.0
-  Downloaded powerfmt v0.2.1
-  Downloaded ppv-lite86 v0.2.21
-  Downloaded quick-error v1.2.3
-  Downloaded quote v1.0.47
-  Downloaded rand_core v0.6.4
-  Downloaded rustc-demangle v0.1.28
-  Downloaded anyhow v1.0.104
-  Downloaded autocfg v1.5.1
-  Downloaded bitflags v2.13.2
-  Downloaded clap v4.6.7
-  Downloaded crc32fast v1.5.3
-  Downloaded crossbeam-utils v0.8.23
-  Downloaded defmt v1.2.0
-  Downloaded env_logger v0.11.11
-  Downloaded find-msvc-tools v0.1.15
-  Downloaded foldhash v0.2.0
-  Downloaded getrandom v0.2.17
-  Downloaded httpdate v1.0.3
-  Downloaded iana-time-zone v0.1.65
-  Downloaded litemap v0.8.3
-  Downloaded mime_guess v2.0.5
-  Downloaded num-traits v0.2.19
-  Downloaded once_cell v1.21.4
-  Downloaded bytes v1.12.1
-  Downloaded getrandom v0.4.3
-  Downloaded httparse v1.10.1
-  Downloaded icu_provider v2.4.0
-  Downloaded log v0.4.34
-  Downloaded proc-macro2 v1.0.107
-  Downloaded serde_core v1.0.229
-  Downloaded simd-adler32 v0.3.10
-  Downloaded stable_deref_trait v1.2.1
-  Downloaded strsim v0.11.1
-  Downloaded base64 v0.13.1
-  Downloaded base64 v0.23.1
-  Downloaded flate2 v1.1.10
-  Downloaded icu_normalizer_data v2.4.0
-  Downloaded miniz_oxide v0.9.1
-  Downloaded multipart v0.18.0
-  Downloaded rand v0.8.8
-  Downloaded rayon-core v1.13.0
-  Downloaded base64 v0.22.1
-  Downloaded icu_collections v2.4.0
-  Downloaded icu_locale_core v2.4.0
-  Downloaded subtle v2.6.1
-  Downloaded threadpool v1.8.1
-  Downloaded untrusted v0.9.0
-  Downloaded utf8-zero v0.8.1
-  Downloaded http v1.5.0
-  Downloaded indexmap v2.14.2
-  Downloaded jiff-core v0.1.1
-  Downloaded memchr v2.8.3
-  Downloaded time-core v0.1.9
-  Downloaded cc v1.10.0
-  Downloaded icu_properties v2.4.0
-  Downloaded idna v1.1.0
-  Downloaded rouille v3.6.2
-  Downloaded sha1_smol v1.0.1
-  Downloaded utf8_iter v1.1.0
-  Downloaded brotli-decompressor v5.0.3
-  Downloaded clap_builder v4.6.7
-  Downloaded safemem v0.3.3
-  Downloaded walrus-macro v0.26.0
-  Downloaded yoke-derive v0.8.4
-  Downloaded hashbrown v0.16.1
-  Downloaded hashbrown v0.17.1
-  Downloaded icu_properties_data v2.4.0
-  Downloaded wasm-bindgen-shared v0.2.130
-  Downloaded zerofrom v0.1.8
-  Downloaded regex v1.13.1
-  Downloaded wasm-bindgen-test-shared v0.2.130
-  Downloaded zerofrom-derive v0.1.8
-  Downloaded utf8parse v0.2.2
-  Downloaded chrono v0.4.45
-  Downloaded synstructure v0.14.0
-  Downloaded thiserror-impl v2.0.21
-  Downloaded tinystr v0.8.5
-  Downloaded twoway v0.1.8
-  Downloaded unicase v2.10.0
-  Downloaded shlex v1.3.0
-  Downloaded shlex v2.0.1
-  Downloaded smallvec v1.16.4
-  Downloaded zeroize v1.9.1
-  Downloaded zerovec-derive v0.11.7
-  Downloaded zmij v1.0.23
-  Downloaded gimli v0.32.3
-  Downloaded tempfile v3.27.0
-  Downloaded thiserror v2.0.21
-  Downloaded unicode-ident v1.0.27
-  Downloaded utf_types v1.0.0
-  Downloaded writeable v0.6.4
-  Downloaded yoke v0.8.4
-  Downloaded rustls-pki-types v1.15.1
-  Downloaded semver v1.0.28
-  Downloaded tiny_http v0.12.0
-  Downloaded serde_derive v1.0.229
-  Downloaded ureq-proto v0.6.5
-  Downloaded url v2.5.8
-  Downloaded rayon v1.12.0
-  Downloaded wasm-encoder v0.245.1
-  Downloaded zerotrie v0.2.5
-  Downloaded rustls-webpki v0.103.16
-  Downloaded serde v1.0.229
-  Downloaded zerovec v0.11.9
-  Downloaded regex-syntax v0.8.11
-  Downloaded rustix v1.1.6
-  Downloaded rustls v0.23.46
-  Downloaded serde_json v1.0.154
-  Downloaded webpki-roots v1.0.11
-  Downloaded zlib-rs v0.6.8
-  Downloaded ureq v3.5.0
-  Downloaded walrus v0.27.3
-  Downloaded wasm-bindgen-cli-support v0.2.130
-  Downloaded icu_normalizer v2.4.0
-  Downloaded time v0.3.55
-  Downloaded wasmparser v0.245.1
-  Downloaded syn v3.0.9
-  Downloaded syn v2.0.119
-  Downloaded zerocopy v0.8.63
-  Downloaded jiff v0.2.38
-  Downloaded regex-automata v0.4.18
-  Downloaded libc v0.2.191
-  Downloaded ring v0.17.14
-  Downloaded linux-raw-sys v0.12.1
-   Compiling proc-macro2 v1.0.107
-   Compiling unicode-ident v1.0.27
-   Compiling quote v1.0.47
-   Compiling libc v0.2.191
+   Compiling proc-macro2 v1.0.103
+   Compiling unicode-ident v1.0.20
+   Compiling quote v1.0.41
+   Compiling cfg-if v1.0.4
+   Compiling libc v0.2.177
    Compiling stable_deref_trait v1.2.1
-   Compiling syn v3.0.9
-   Compiling cfg-if v1.0.5
-   Compiling memchr v2.8.3
-   Compiling serde_core v1.0.229
-   Compiling log v0.4.34
-   Compiling synstructure v0.14.0
-   Compiling zerovec-derive v0.11.7
-   Compiling zerofrom-derive v0.1.8
-   Compiling yoke-derive v0.8.4
-   Compiling zerofrom v0.1.8
-   Compiling displaydoc v0.2.7
-   Compiling yoke v0.8.4
-   Compiling getrandom v0.2.17
-   Compiling zerovec v0.11.9
-   Compiling crossbeam-utils v0.8.23
-   Compiling crossbeam-epoch v0.9.21
-   Compiling utf_types v1.0.0
-   Compiling litemap v0.8.3
-   Compiling tinystr v0.8.5
-   Compiling find-msvc-tools v0.1.15
-   Compiling writeable v0.6.4
-   Compiling shlex v2.0.1
-   Compiling icu_locale_core v2.4.0
-   Compiling cc v1.10.0
-   Compiling potential_utf v0.1.6
-   Compiling utf8_iter v1.1.0
-   Compiling zerotrie v0.2.5
-   Compiling bitflags v2.13.2
-   Compiling icu_properties_data v2.4.0
-   Compiling zerocopy v0.8.63
-   Compiling icu_normalizer_data v2.4.0
-   Compiling crossbeam-deque v0.8.8
-   Compiling icu_provider v2.4.0
-   Compiling icu_collections v2.4.0
+   Compiling syn v2.0.108
+   Compiling serde_core v1.0.228
+   Compiling memchr v2.7.6
+   Compiling synstructure v0.13.2
+   Compiling zerocopy v0.8.27
+   Compiling serde v1.0.228
+   Compiling autocfg v1.5.0
+   Compiling zerofrom-derive v0.1.6
+   Compiling yoke-derive v0.8.0
+   Compiling zerovec-derive v0.11.1
+   Compiling zerofrom v0.1.6
+   Compiling yoke v0.8.0
+   Compiling displaydoc v0.2.5
+   Compiling serde_derive v1.0.228
+   Compiling zerovec v0.11.4
+   Compiling tinystr v0.8.1
+   Compiling getrandom v0.2.16
+   Compiling once_cell v1.21.3
+   Compiling writeable v0.6.1
+   Compiling litemap v0.8.0
+   Compiling log v0.4.28
+   Compiling crossbeam-utils v0.8.21
+   Compiling icu_locale_core v2.0.0
+   Compiling potential_utf v0.1.3
+   Compiling zerotrie v0.2.2
+   Compiling icu_properties_data v2.0.1
+   Compiling shlex v1.3.0
+   Compiling icu_normalizer_data v2.0.0
+   Compiling find-msvc-tools v0.1.4
+   Compiling bitflags v2.10.0
+   Compiling cc v1.2.43
+   Compiling icu_provider v2.0.0
+   Compiling icu_collections v2.0.0
+   Compiling crossbeam-epoch v0.9.18
    Compiling ring v0.17.14
-   Compiling httparse v1.10.1
-   Compiling itoa v1.0.18
-   Compiling serde v1.0.229
    Compiling rayon-core v1.13.0
-   Compiling serde_derive v1.0.229
-   Compiling equivalent v1.0.3
-   Compiling zmij v1.0.23
-   Compiling hashbrown v0.17.1
-   Compiling zeroize v1.9.1
-   Compiling once_cell v1.21.4
-   Compiling unicase v2.10.0
-   Compiling rustix v1.1.6
-   Compiling getrandom v0.4.3
+   Compiling version_check v0.9.5
+   Compiling zeroize v1.8.2
+   Compiling smallvec v1.15.1
+   Compiling rustls-pki-types v1.13.0
+   Compiling icu_normalizer v2.0.0
+   Compiling ahash v0.8.12
+   Compiling crossbeam-deque v0.8.6
+   Compiling icu_properties v2.0.1
+   Compiling indexmap v1.9.3
+   Compiling unicase v2.8.1
    Compiling heck v0.5.0
-   Compiling smallvec v1.16.4
-   Compiling autocfg v1.5.1
+   Compiling equivalent v1.0.2
    Compiling utf8parse v0.2.2
-   Compiling anstyle-parse v1.0.0
-   Compiling num-traits v0.2.19
-   Compiling icu_normalizer v2.4.0
+   Compiling rustix v1.1.2
+   Compiling hashbrown v0.16.0
+   Compiling getrandom v0.3.4
+   Compiling indexmap v2.12.0
+   Compiling anstyle-parse v0.2.7
    Compiling mime_guess v2.0.5
-   Compiling rustls-pki-types v1.15.1
-   Compiling indexmap v2.14.2
-   Compiling icu_properties v2.4.0
-   Compiling ppv-lite86 v0.2.21
+   Compiling idna_adapter v1.2.1
    Compiling rand_core v0.6.4
-   Compiling aho-corasick v1.1.5
-   Compiling is_terminal_polyfill v1.70.2
-   Compiling anstyle v1.0.14
-   Compiling either v1.19.0
-   Compiling colorchoice v1.0.5
-   Compiling crc32fast v1.5.3
-   Compiling anstyle-query v1.1.5
-   Compiling regex-syntax v0.8.11
+   Compiling ppv-lite86 v0.2.21
+   Compiling num-traits v0.2.19
+   Compiling aho-corasick v1.1.3
+   Compiling anstyle v1.0.13
+   Compiling foldhash v0.1.5
+   Compiling colorchoice v1.0.4
+   Compiling wasm-encoder v0.240.0
+   Compiling crc32fast v1.5.0
+   Compiling wasmparser v0.240.0
+   Compiling either v1.15.0
+   Compiling anstyle-query v1.1.4
    Compiling untrusted v0.9.0
+   Compiling utf8_iter v1.0.4
    Compiling percent-encoding v2.3.2
-   Compiling serde_json v1.0.154
-   Compiling foldhash v0.2.0
-   Compiling linux-raw-sys v0.12.1
-   Compiling anyhow v1.0.104
-   Compiling hashbrown v0.16.1
-   Compiling regex-automata v0.4.18
-   Compiling anstream v1.0.0
-   Compiling rayon v1.12.0
-   Compiling rand_chacha v0.3.1
-   Compiling idna_adapter v1.2.2
-   Compiling syn v2.0.119
-   Compiling alloc-no-stdlib v2.0.4
-   Compiling bytes v1.12.1
-   Compiling fallible-iterator v0.3.0
-   Compiling semver v1.0.28
-   Compiling simd-adler32 v0.3.10
-   Compiling fastrand v2.5.0
-   Compiling wasm-bindgen-shared v0.2.130
-   Compiling safemem v0.3.3
-   Compiling adler2 v2.0.1
-   Compiling rustls v0.23.46
-   Compiling leb128fmt v0.1.0
-   Compiling mime v0.3.17
-   Compiling wasm-encoder v0.245.1
-   Compiling miniz_oxide v0.9.1
-   Compiling buf_redux v0.8.4
-   Compiling tempfile v3.27.0
-   Compiling wasmparser v0.245.1
-   Compiling gimli v0.32.3
-   Compiling http v1.5.0
-   Compiling alloc-stdlib v0.2.4
-   Compiling walrus-macro v0.26.0
-   Compiling idna v1.1.0
-   Compiling rand v0.8.8
-   Compiling id-arena v2.3.0
-   Compiling regex v1.13.1
-   Compiling rustls-webpki v0.103.16
+   Compiling httparse v1.10.1
+   Compiling hashbrown v0.12.3
+   Compiling linux-raw-sys v0.11.0
+   Compiling regex-syntax v0.8.8
+   Compiling semver v1.0.27
+   Compiling anyhow v1.0.100
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling serde_json v1.0.145
+   Compiling anstream v0.6.21
+   Compiling regex-automata v0.4.13
    Compiling form_urlencoded v1.2.2
+   Compiling idna v1.1.0
+   Compiling rayon v1.11.0
+   Compiling hashbrown v0.15.5
+   Compiling rand_chacha v0.3.1
+   Compiling wasm-bindgen-shared v0.2.105
+   Compiling ryu v1.0.20
+   Compiling mime v0.3.17
+   Compiling leb128fmt v0.1.0
+   Compiling itoa v1.0.15
+   Compiling rustls v0.23.34
+   Compiling fallible-iterator v0.2.0
+   Compiling powerfmt v0.2.0
+   Compiling adler2 v2.0.1
+   Compiling simd-adler32 v0.3.7
+   Compiling fastrand v2.3.0
+   Compiling safemem v0.3.3
+   Compiling alloc-no-stdlib v2.0.4
+   Compiling alloc-stdlib v0.2.2
+   Compiling buf_redux v0.8.4
+   Compiling tempfile v3.23.0
+   Compiling miniz_oxide v0.8.9
+   Compiling gimli v0.26.2
+   Compiling deranged v0.5.5
+   Compiling id-arena v2.2.1
+   Compiling hashbrown v0.14.5
+   Compiling rand v0.8.5
+   Compiling rustls-webpki v0.103.7
+   Compiling url v2.5.7
+   Compiling regex v1.12.2
+   Compiling walrus-macro v0.24.0
+   Compiling webpki-roots v1.0.3
    Compiling twoway v0.1.8
    Compiling num_cpus v1.17.0
-   Compiling num-conv v0.2.2
-   Compiling powerfmt v0.2.1
-   Compiling quick-error v1.2.3
-   Compiling jiff-core v0.1.1
-   Compiling clap_lex v1.1.1
-   Compiling num_threads v0.1.8
-   Compiling ascii v1.1.0
-   Compiling time-core v0.1.9
-   Compiling subtle v2.6.1
-   Compiling strsim v0.11.1
-   Compiling chunked_transfer v1.5.0
-   Compiling base64 v0.23.1
    Compiling httpdate v1.0.3
-   Compiling leb128 v0.2.7
-   Compiling deranged v0.5.9
-   Compiling iana-time-zone v0.1.65
-   Compiling chrono v0.4.45
-   Compiling time v0.3.55
-   Compiling walrus v0.27.3
-   Compiling tiny_http v0.12.0
-   Compiling ureq-proto v0.6.5
-   Compiling clap_builder v4.6.7
-   Compiling jiff v0.2.38
-   Compiling multipart v0.18.0
-   Compiling threadpool v1.8.1
-   Compiling url v2.5.8
-   Compiling env_filter v2.0.0
-   Compiling flate2 v1.1.10
-   Compiling brotli-decompressor v5.0.3
-   Compiling webpki-roots v1.0.11
-   Compiling clap_derive v4.6.7
-   Compiling filetime v0.2.29
-   Compiling utf8-zero v0.8.1
-   Compiling base64 v0.13.1
+   Compiling subtle v2.6.1
+   Compiling leb128 v0.2.5
+   Compiling clap_lex v0.7.6
    Compiling base64 v0.22.1
+   Compiling strsim v0.11.1
+   Compiling ascii v1.1.0
+   Compiling time-core v0.1.6
+   Compiling num-conv v0.1.0
+   Compiling chunked_transfer v1.5.0
+   Compiling quick-error v1.2.3
+   Compiling iana-time-zone v0.1.64
+   Compiling num_threads v0.1.7
+   Compiling time v0.3.44
+   Compiling chrono v0.4.42
+   Compiling multipart v0.18.0
+   Compiling tiny_http v0.12.0
+   Compiling clap_builder v4.5.50
+   Compiling walrus v0.24.2
+   Compiling threadpool v1.8.1
+   Compiling webpki-roots v0.26.11
+   Compiling env_filter v0.1.4
+   Compiling flate2 v1.1.5
+   Compiling wasmparser v0.214.0
+   Compiling brotli-decompressor v4.0.3
+   Compiling clap_derive v4.5.49
+   Compiling filetime v0.2.26
    Compiling sha1_smol v1.0.1
-   Compiling rustc-demangle v0.1.28
-   Compiling wasm-bindgen-cli-support v0.2.130
+   Compiling rustc-demangle v0.1.26
+   Compiling base64 v0.13.1
+   Compiling jiff v0.2.15
+   Compiling env_logger v0.11.8
    Compiling rouille v3.6.2
-   Compiling ureq v3.5.0
-   Compiling clap v4.6.7
-   Compiling env_logger v0.11.11
-   Compiling shlex v1.3.0
-   Compiling wasm-bindgen-test-shared v0.2.130
-   Compiling wasm-bindgen-cli v0.2.130
-    Finished `release` profile [optimized] target(s) in 5m 16s
+   Compiling wasm-bindgen-cli-support v0.2.105
+   Compiling clap v4.5.50
+   Compiling ureq v2.12.1
+   Compiling wasm-bindgen-cli v0.2.105
+    Finished `release` profile [optimized] target(s) in 5m 13s
 warning: the following packages contain code that will be rejected by a future version of Rust: buf_redux v0.8.4, multipart v0.18.0
 note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
-  Installing /root/.cargo/bin/wasm-bindgen
-  Installing /root/.cargo/bin/wasm-bindgen-test-runner
-  Installing /root/.cargo/bin/wasm2es6js
-   Installed package `wasm-bindgen-cli v0.2.130` (executables `wasm-bindgen`, `wasm-bindgen-test-runner`, `wasm2es6js`)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following NEW packages will be installed:
-  binaryen
-0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
-Need to get 3,390 kB of archives.
-After this operation, 15.7 MB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 binaryen amd64 108-1 [3,390 kB]
-Fetched 3,390 kB in 8s (414 kB/s)
-Selecting previously unselected package binaryen.
-(Reading database ... 122813 files and directories currently installed.)
-Preparing to unpack .../binaryen_108-1_amd64.deb ...
-Unpacking binaryen (108-1) ...
-Setting up binaryen (108-1) ...
-    Updating crates.io index
- Downloading crates ...
-  Downloaded wasm-snip v0.4.0
-  Installing wasm-snip v0.4.0
-    Updating crates.io index
-warning: package `crossbeam-deque v0.7.1` in Cargo.lock is yanked in registry `crates-io`
-    Updating crates.io index
- Downloading crates ...
-  Downloaded atty v0.2.13
-  Downloaded aho-corasick v0.7.6
-  Downloaded arrayvec v0.4.11
-  Downloaded ansi_term v0.11.0
-  Downloaded backtrace v0.3.37
-  Downloaded heck v0.3.1
-  Downloaded id-arena v2.2.1
-  Downloaded lazy_static v1.4.0
-  Downloaded quote v0.6.13
-  Downloaded strsim v0.8.0
-  Downloaded crossbeam-queue v0.1.2
-  Downloaded failure_derive v0.1.5
-  Downloaded leb128 v0.2.4
-  Downloaded memoffset v0.5.1
-  Downloaded textwrap v0.11.0
-  Downloaded unicode-width v0.1.6
-  Downloaded cfg-if v0.1.9
-  Downloaded crossbeam-deque v0.7.1
-  Downloaded either v1.5.2
-  Downloaded proc-macro2 v1.0.3
-  Downloaded semver v0.9.0
-  Downloaded rustc_version v0.2.3
-  Downloaded num_cpus v1.10.1
-  Downloaded scopeguard v1.0.0
-  Downloaded nodrop v0.1.13
-  Downloaded thread_local v0.3.6
-  Downloaded unicode-xid v0.1.0
-  Downloaded unicode-xid v0.2.0
-  Downloaded vec_map v0.8.1
-  Downloaded quote v1.0.2
-  Downloaded rustc-demangle v0.1.16
-  Downloaded semver-parser v0.7.0
-  Downloaded synstructure v0.10.2
-  Downloaded bitflags v1.1.0
-  Downloaded log v0.4.8
-  Downloaded memchr v2.2.1
-  Downloaded proc-macro2 v0.4.30
-  Downloaded crossbeam-utils v0.6.6
-  Downloaded cc v1.0.45
-  Downloaded crossbeam-epoch v0.7.2
-  Downloaded failure v0.1.5
-  Downloaded rayon v1.2.0
-  Downloaded rayon-core v1.6.0
-  Downloaded unicode-segmentation v1.3.0
-  Downloaded syn v0.15.44
-  Downloaded syn v1.0.5
-  Downloaded clap v2.33.0
-  Downloaded regex v1.3.1
-  Downloaded regex-syntax v0.6.12
-  Downloaded libc v0.2.62
-  Downloaded backtrace-sys v0.1.31
-  Downloaded walrus-macro v0.12.0
-  Downloaded wasmparser v0.37.2
-  Downloaded walrus v0.12.0
-   Compiling libc v0.2.62
-   Compiling cfg-if v0.1.9
-   Compiling semver-parser v0.7.0
-   Compiling semver v0.9.0
-   Compiling lazy_static v1.4.0
-   Compiling rustc_version v0.2.3
-   Compiling arrayvec v0.4.11
-   Compiling memoffset v0.5.1
-   Compiling proc-macro2 v0.4.30
-   Compiling crossbeam-utils v0.6.6
-   Compiling nodrop v0.1.13
-   Compiling unicode-xid v0.1.0
-   Compiling syn v0.15.44
-   Compiling proc-macro2 v1.0.3
-   Compiling scopeguard v1.0.0
-   Compiling cc v1.0.45
-   Compiling crossbeam-epoch v0.7.2
-   Compiling quote v0.6.13
-   Compiling rayon-core v1.6.0
-   Compiling backtrace-sys v0.1.31
-   Compiling unicode-xid v0.2.0
-   Compiling crossbeam-deque v0.7.1
-   Compiling crossbeam-queue v0.1.2
-   Compiling num_cpus v1.10.1
-   Compiling failure_derive v0.1.5
-   Compiling memchr v2.2.1
-   Compiling syn v1.0.5
-   Compiling synstructure v0.10.2
-   Compiling quote v1.0.2
-   Compiling unicode-segmentation v1.3.0
-   Compiling rustc-demangle v0.1.16
-   Compiling log v0.4.8
-   Compiling bitflags v1.1.0
-   Compiling either v1.5.2
-   Compiling rayon v1.2.0
-   Compiling backtrace v0.3.37
-   Compiling heck v0.3.1
-   Compiling unicode-width v0.1.6
-   Compiling textwrap v0.11.0
-   Compiling aho-corasick v0.7.6
-   Compiling walrus-macro v0.12.0
-   Compiling failure v0.1.5
-   Compiling id-arena v2.2.1
-   Compiling atty v0.2.13
-   Compiling thread_local v0.3.6
-   Compiling wasmparser v0.37.2
-   Compiling strsim v0.8.0
-   Compiling vec_map v0.8.1
-   Compiling leb128 v0.2.4
-   Compiling regex-syntax v0.6.12
-   Compiling ansi_term v0.11.0
-   Compiling clap v2.33.0
-   Compiling regex v1.3.1
-   Compiling walrus v0.12.0
-   Compiling wasm-snip v0.4.0
-    Finished `release` profile [optimized] target(s) in 1m 20s
-  Installing /root/.cargo/bin/wasm-snip
-   Installed package `wasm-snip v0.4.0` (executable `wasm-snip`)
-/content/scramjet/packages/core
-$ cd rewriter/wasm/ && bash build.sh && cd ../../
-Incorrect wasm-bindgen-cli version: 'wasm-bindgen 0.2.130' != 'wasm-bindgen 0.2.105'
-[ELIFECYCLE] Command failed with exit code 1.
+   Replacing /root/.cargo/bin/wasm-bindgen
+   Replacing /root/.cargo/bin/wasm-bindgen-test-runner
+   Replacing /root/.cargo/bin/wasm2es6js
+    Replaced package `wasm-bindgen-cli v0.2.130` with `wasm-bindgen-cli v0.2.105` (executables `wasm-bindgen`, `wasm-bindgen-test-runner`, `wasm2es6js`)
+wasm-bindgen 0.2.105
