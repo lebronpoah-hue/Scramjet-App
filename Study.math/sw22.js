@@ -25,12 +25,9 @@ async function handle(event) {
     const u = new URL(event.request.url);
     // Serve the hub page as real HTML (jsDelivr would send it as text/plain)
     if (event.request.mode === "navigate" && (u.pathname === APP_PATH || u.pathname === APP_PATH.slice(0, -1))) {
-    // Replace the old COM branding when the service worker serves app22.html
-const r = await fetch(BASE + "app22.html");
-const html = (await r.text()).replace(/<\\/span>com/g, "</span>math");
-return new Response(html, {
-  headers: { "content-type": "text/html; charset=utf-8" }
-});
+      const r = await fetch(BASE + "app22.html");
+      return new Response(await r.text(), { headers: { "content-type": "text/html; charset=utf-8" } });
+    }
     // Only touch Scramjet's database for proxied URLs, so the page can create it first
     if (u.pathname.startsWith(PREFIX_PATH)) {
       const sj = getScramjet();
