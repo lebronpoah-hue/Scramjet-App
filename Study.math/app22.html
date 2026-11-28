@@ -493,7 +493,7 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
       </svg>
       <label for="browserAddress" style="position:absolute;left:-10000px;">Search DuckDuckGo</label>
       <input id="browserAddress" name="q" type="text" value="" placeholder="Search DuckDuckGo" maxlength="200" autocomplete="off" spellcheck="false">
-    </form><span class="browser-status">STUDY / 01</span>
+    </form><span class="browser-status">Study / 01</span>
   </div>
 
 
@@ -503,8 +503,8 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
   <nav
     style="position: fixed; top: 56px; width: 100%; z-index: 50; padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; mix-blend-mode: difference;">
     <div style="font-size: 1.25rem; font-weight: 900; letter-spacing: -0.04em;">
-      STUDY<span style="color: var(--accent);">.</span>
-    Math</div>
+      Study<span style="color: var(--accent);">.math</span>
+</div>
 
     <div class="nav-links" style="display: flex; gap: 3rem;">
       <button class="nav-link active" data-page="home">Home</button>
@@ -522,7 +522,7 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
         style="min-height: calc(100vh - 12rem); display: flex; flex-direction: column; align-items: center; justify-content: center;">
 
         <h1 class="brand-title" style="margin-bottom: 2.5rem;">
-          STUDY<span style="color: var(--accent);">.</span>Math
+          Study<span style="color: var(--accent);">.</span>math
         </h1>
 
         <form id="homeWebSearch" style="display: flex; gap: 0.75rem; max-width: 40rem; width: 100%;">
@@ -1578,8 +1578,8 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
         var k = 1000;
         var dm = decimals + 1 || 3;
         var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-        var i = Math.floor(Math.log(bytes) / Math.log(k));
-        return (bytes / Math.pow(k, i)).toPrecision(dm) + ' ' + sizes[i];
+        var i = math.floor(math.log(bytes) / math.log(k));
+        return (bytes / math.pow(k, i)).toPrecision(dm) + ' ' + sizes[i];
       }
 
       this.Clear = function() {
@@ -1600,7 +1600,7 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
 
         this.progressBar.style.top = this.progressFrame.style.top;
         this.progressBar.style.left = this.progressFrame.style.left;
-        this.progressBar.width = progressFrameImg.width * Math.min(this.progress, 1);
+        this.progressBar.width = progressFrameImg.width * math.min(this.progress, 1);
 
         this.messageArea.innerHTML = this.message;
       }
@@ -3552,7 +3552,7 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
                             if (!e.length) return !1;
                             var r = 1 & e[0] ? (14 & e[0] ? 4 : 7) : 1,
                                 n = e[0] & ((1 << r) - 1),
-                                o = 1 + ((Math.log(t.length - 1) / Math.log(2)) >> 3);
+                                o = 1 + ((math.log(t.length - 1) / math.log(2)) >> 3);
                             if (((commentOffset = (r + 1 + 2 + 1 + 2 + (o << 3) + 7) >> 3), 17 == n || commentOffset > e.length))
                                 return !1;
                             for (var i = n + ((6 + (o << 4) + ((t.length - 1) << 6)) << r), a = 0; a < commentOffset; a++, i >>>= 8)
@@ -3629,7 +3629,7 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
                         }
                         t.HEAPU32[t.crc32 >> 2] = 0;
                         for (var s = 0; s < e.length;) {
-                            var d = Math.min(t.HEAPU8.length - t.data, e.length - s);
+                            var d = math.min(t.HEAPU8.length - t.data, e.length - s);
                             t.HEAPU8.set(e.subarray(s, s + d), t.data), (crc = t.process(t.data, d)), (s += d);
                         }
                         var l = t.HEAPU32[t.crc32 >> 2];
@@ -3704,7 +3704,7 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
                         }
                         t.HEAPU32.set(new Uint32Array([1732584193, 4023233417, 2562383102, 271733878]), t.md5 >> 2);
                         for (var o = 0; o < e.length;) {
-                            var i = Math.min(t.HEAPU8.length - t.data, e.length - o) & -64;
+                            var i = math.min(t.HEAPU8.length - t.data, e.length - o) & -64;
                             if ((t.HEAPU8.set(e.subarray(o, o + i), t.data), (o += i), t.process(t.data, i >> 6), e.length - o < 64)) {
                                 if (((i = e.length - o), t.HEAPU8.set(e.subarray(e.length - i, e.length), t.data), (o += i), (t.HEAPU8[t.data + i++] = 128), i > 56)) {
                                     for (var a = i; a < 64; a++) t.HEAPU8[t.data + a] = 0;
@@ -3791,7 +3791,7 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
                         }
                         t.HEAPU32.set(new Uint32Array([1732584193, 4023233417, 2562383102, 271733878, 3285377520, ]), t.sha1 >> 2);
                         for (var o = 0; o < e.length;) {
-                            var i = Math.min(t.HEAPU8.length - t.data, e.length - o) & -64;
+                            var i = math.min(t.HEAPU8.length - t.data, e.length - o) & -64;
                             if ((t.HEAPU8.set(e.subarray(o, o + i), t.data), (o += i), t.process(t.data, i >> 6), e.length - o < 64)) {
                                 if (((i = e.length - o), t.HEAPU8.set(e.subarray(e.length - i, e.length), t.data), (o += i), (t.HEAPU8[t.data + i++] = 128), i > 56)) {
                                     for (var a = i; a < 64; a++) t.HEAPU8[t.data + a] = 0;
@@ -4236,7 +4236,7 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
                 },
                 processAsmCodeJob: function(e, t) {
                     var r = UnityLoader.Job.result(e, "downloadAsmCode");
-                    UnityLoader.loadCode(e, Math.fround ? r : UnityLoader.Utils.optimizeMathFround(r), function(r, n) {
+                    UnityLoader.loadCode(e, math.fround ? r : UnityLoader.Utils.optimizemathFround(r), function(r, n) {
                         e.isModularized ? (e.asmJsUrlOrBlob = n) : (e.asm = UnityLoader[r]), t.complete();
                     }, {
                         Module: e,
@@ -4462,13 +4462,13 @@ s.register=function(u,o){var a=new URL(String(u),location.href).href;if(a===ours
                     assert: function(e, t) {
                         e || abort("Assertion failed: " + t);
                     },
-                    optimizeMathFround: function(e, t) {
-                        console.log("optimizing out Math.fround calls");
+                    optimizemathFround: function(e, t) {
+                        console.log("optimizing out math.fround calls");
                         for (var r = {
                                 LOOKING_FOR_MODULE: 0,
                                 SCANNING_MODULE_VARIABLES: 1,
                                 SCANNING_MODULE_FUNCTIONS: 2,
-                            }, n = ["EMSCRIPTEN_START_ASM", "EMSCRIPTEN_START_FUNCS", "EMSCRIPTEN_END_FUNCS", ], o = "var", i = "global.Math.fround;", a = 0, s = t ? r.LOOKING_FOR_MODULE : r.SCANNING_MODULE_VARIABLES, d = 0, l = 0; s <= r.SCANNING_MODULE_FUNCTIONS && a < e.length; a++)
+                            }, n = ["EMSCRIPTEN_START_ASM", "EMSCRIPTEN_START_FUNCS", "EMSCRIPTEN_END_FUNCS", ], o = "var", i = "global.math.fround;", a = 0, s = t ? r.LOOKING_FOR_MODULE : r.SCANNING_MODULE_VARIABLES, d = 0, l = 0; s <= r.SCANNING_MODULE_FUNCTIONS && a < e.length; a++)
                             if (47 == e[a] && 47 == e[a + 1] && 32 == e[a + 2] && String.fromCharCode.apply(null, e.subarray(a + 3, a + 3 + n[s].length)) === n[s])
                                 s++;
                             else if (s != r.SCANNING_MODULE_VARIABLES || l || 61 != e[a] || String.fromCharCode.apply(null, e.subarray(a + 1, a + 1 + i.length)) !== i) {
@@ -6802,25 +6802,25 @@ window.gtag("config", firebaseConfig.measurementId, {
 
     function generatePoints() {
       const count = maxPointsOverride;
-      const columns = Math.max(1, Math.ceil(Math.sqrt(count * canvas.width / Math.max(canvas.height, 1))));
-      const rows = Math.max(1, Math.ceil(count / columns));
+      const columns = math.max(1, math.ceil(math.sqrt(count * canvas.width / math.max(canvas.height, 1))));
+      const rows = math.max(1, math.ceil(count / columns));
       points = [];
       for (let i = 0; i < count; i++) {
         const column = i % columns;
-        const row = Math.floor(i / columns);
-        const baseX = particlePattern === 'grid' ? (column + 0.5 + (Math.random() - 0.5) * 0.28) / columns : Math.random();
-        const baseY = particlePattern === 'grid' ? (row + 0.5 + (Math.random() - 0.5) * 0.28) / rows : Math.random();
+        const row = math.floor(i / columns);
+        const baseX = particlePattern === 'grid' ? (column + 0.5 + (math.random() - 0.5) * 0.28) / columns : math.random();
+        const baseY = particlePattern === 'grid' ? (row + 0.5 + (math.random() - 0.5) * 0.28) / rows : math.random();
         points.push({
           x: baseX * canvas.width,
           y: baseY * canvas.height,
           baseX,
           baseY,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          r: Math.random() * 2 + 1,
-          phase: i * 0.7 + Math.random() * 0.4,
-          orbitRadius: Math.min(canvas.width, canvas.height) * (0.08 + Math.random() * 0.38),
-          orbitSpeed: (0.07 + Math.random() * 0.12) * (i % 2 === 0 ? 1 : -1)
+          vx: (math.random() - 0.5) * 0.5,
+          vy: (math.random() - 0.5) * 0.5,
+          r: math.random() * 2 + 1,
+          phase: i * 0.7 + math.random() * 0.4,
+          orbitRadius: math.min(canvas.width, canvas.height) * (0.08 + math.random() * 0.38),
+          orbitSpeed: (0.07 + math.random() * 0.12) * (i % 2 === 0 ? 1 : -1)
         });
       }
     }
@@ -6828,9 +6828,9 @@ window.gtag("config", firebaseConfig.measurementId, {
     function drawPolygon(x, y, radius, sides, rotation = 0) {
       ctx.beginPath();
       for (let side = 0; side < sides; side++) {
-        const angle = rotation + side / sides * Math.PI * 2;
-        const px = x + Math.cos(angle) * radius;
-        const py = y + Math.sin(angle) * radius;
+        const angle = rotation + side / sides * math.PI * 2;
+        const px = x + math.cos(angle) * radius;
+        const py = y + math.sin(angle) * radius;
         if (side === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
       }
       ctx.closePath();
@@ -6842,11 +6842,11 @@ window.gtag("config", firebaseConfig.measurementId, {
       ctx.strokeStyle = rgbaFromHex(bubbleColor, .075);
       ctx.lineWidth = 0.8;
       if (geometryPattern === 'triangles') {
-        const size = 82, rowHeight = size * Math.sqrt(3) / 2;
+        const size = 82, rowHeight = size * math.sqrt(3) / 2;
         for (let row = -1; row * rowHeight < canvas.height + rowHeight; row++) {
           const y = row * rowHeight, offset = row % 2 === 0 ? 0 : size / 2;
           for (let col = -1; col * size < canvas.width + size; col++) {
-            drawPolygon(col * size + offset + size / 2, y + rowHeight / 2, size / 2, 3, Math.PI / 2);
+            drawPolygon(col * size + offset + size / 2, y + rowHeight / 2, size / 2, 3, math.PI / 2);
             ctx.stroke();
           }
         }
@@ -6855,16 +6855,16 @@ window.gtag("config", firebaseConfig.measurementId, {
         for (let row = -1; row * yStep < canvas.height + yStep; row++) {
           const offset = row % 2 === 0 ? 0 : xStep / 2;
           for (let col = -1; col * xStep < canvas.width + xStep; col++) {
-            drawPolygon(col * xStep + offset, row * yStep, radius, 6, Math.PI / 6);
+            drawPolygon(col * xStep + offset, row * yStep, radius, 6, math.PI / 6);
             ctx.stroke();
           }
         }
       } else if (geometryPattern === 'orbit') {
-        const cx = canvas.width / 2, cy = canvas.height / 2, maxRadius = Math.min(canvas.width, canvas.height) * 0.47;
+        const cx = canvas.width / 2, cy = canvas.height / 2, maxRadius = math.min(canvas.width, canvas.height) * 0.47;
         [0.28, 0.52, 0.76, 1].forEach((scale, index) => {
           const radius = maxRadius * scale;
-          ctx.globalAlpha = 0.45 + Math.sin(time * 0.18 + index) * 0.18;
-          ctx.beginPath(); ctx.ellipse(cx, cy, radius, radius * 0.7, 0, 0, Math.PI * 2); ctx.stroke();
+          ctx.globalAlpha = 0.45 + math.sin(time * 0.18 + index) * 0.18;
+          ctx.beginPath(); ctx.ellipse(cx, cy, radius, radius * 0.7, 0, 0, math.PI * 2); ctx.stroke();
           ctx.globalAlpha = 1;
         });
       } else {
@@ -6883,20 +6883,20 @@ window.gtag("config", firebaseConfig.measurementId, {
 
     function drawBubble(point, index, x, y, time) {
       const mode = bubbleStyle === 'mixed' ? ['glow', 'outline', 'geometric'][index % 3] : bubbleStyle;
-      const opacity = 0.22 + (Math.sin(time * 0.5 + point.phase) + 1) * 0.14;
+      const opacity = 0.22 + (math.sin(time * 0.5 + point.phase) + 1) * 0.14;
       ctx.save();
       if (mode === 'outline') {
-        ctx.beginPath(); ctx.arc(x, y, point.r * 1.8, 0, Math.PI * 2);
+        ctx.beginPath(); ctx.arc(x, y, point.r * 1.8, 0, math.PI * 2);
         ctx.strokeStyle = rgbaFromHex(bubbleColor, opacity + 0.08); ctx.lineWidth = 0.9; ctx.stroke();
       } else if (mode === 'geometric') {
         drawPolygon(x, y, point.r * 2.05, [3, 4, 6, 5][index % 4], point.phase + time * 0.035);
         ctx.fillStyle = rgbaFromHex(bubbleColor, opacity * 0.8); ctx.fill();
         ctx.strokeStyle = rgbaFromHex(bubbleColor, opacity + 0.08); ctx.lineWidth = 0.65; ctx.stroke();
       } else {
-        ctx.beginPath(); ctx.arc(x, y, point.r, 0, Math.PI * 2);
+        ctx.beginPath(); ctx.arc(x, y, point.r, 0, math.PI * 2);
         ctx.fillStyle = rgbaFromHex(bubbleColor, opacity); ctx.fill();
         if (index % 14 === 0) {
-          ctx.beginPath(); ctx.arc(x, y, point.r * 4, 0, Math.PI * 2);
+          ctx.beginPath(); ctx.arc(x, y, point.r * 4, 0, math.PI * 2);
           ctx.fillStyle = rgbaFromHex(bubbleColor, opacity * 0.15); ctx.fill();
         }
       }
@@ -6919,14 +6919,14 @@ window.gtag("config", firebaseConfig.measurementId, {
         let x, y;
         if (particlePattern === 'orbit') {
           const angle = point.phase + time * point.orbitSpeed;
-          x = canvas.width / 2 + Math.cos(angle) * point.orbitRadius;
-          y = canvas.height / 2 + Math.sin(angle) * point.orbitRadius;
+          x = canvas.width / 2 + math.cos(angle) * point.orbitRadius;
+          y = canvas.height / 2 + math.sin(angle) * point.orbitRadius;
         } else if (particlePattern === 'grid') {
-          x = point.baseX * canvas.width + Math.sin(time * 0.45 + point.phase) * 3;
-          y = point.baseY * canvas.height + Math.cos(time * 0.38 + point.phase) * 3;
+          x = point.baseX * canvas.width + math.sin(time * 0.45 + point.phase) * 3;
+          y = point.baseY * canvas.height + math.cos(time * 0.38 + point.phase) * 3;
         } else if (particlePattern === 'constellation') {
-          x = point.baseX * canvas.width + Math.sin(time * 0.22 + point.phase) * 10;
-          y = point.baseY * canvas.height + Math.cos(time * 0.2 + point.phase) * 9;
+          x = point.baseX * canvas.width + math.sin(time * 0.22 + point.phase) * 10;
+          y = point.baseY * canvas.height + math.cos(time * 0.2 + point.phase) * 9;
         } else {
           point.x += point.vx; point.y += point.vy;
           if (point.x < 0 || point.x > canvas.width) point.vx *= -1;
@@ -6937,12 +6937,12 @@ window.gtag("config", firebaseConfig.measurementId, {
       });
 
       if (particlePattern === 'constellation' || particlePattern === 'drift') {
-        const distanceLimit = particlePattern === 'constellation' ? Math.min(canvas.width, canvas.height) * 0.19 : connectionDistance;
+        const distanceLimit = particlePattern === 'constellation' ? math.min(canvas.width, canvas.height) * 0.19 : connectionDistance;
         let lineCount = 0;
         for (let i = 0; i < visiblePoints.length && lineCount < 180; i++) {
           for (let j = i + 1; j < visiblePoints.length && lineCount < 180; j++) {
             const a = visiblePoints[i], b = visiblePoints[j];
-            const distance = Math.hypot(a.x - b.x, a.y - b.y);
+            const distance = math.hypot(a.x - b.x, a.y - b.y);
             if (distance < distanceLimit) {
               ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
               ctx.strokeStyle = rgbaFromHex(bubbleColor, (1 - distance / distanceLimit) * 0.12);
@@ -7798,7 +7798,7 @@ window.gtag("config", firebaseConfig.measurementId, {
     if (t.pane) t.pane.remove();
     tabs.splice(i, 1);
     if (!tabs.length) { const h = makeTab(); active = h; }
-    else if (active === t) active = tabs[Math.min(i, tabs.length - 1)];
+    else if (active === t) active = tabs[math.min(i, tabs.length - 1)];
     render();
   }
 
