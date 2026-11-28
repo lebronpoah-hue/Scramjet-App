@@ -10,11 +10,11 @@
     for (var i = 0; i < regs.length; i++) {
       var r = regs[i];
       var active = r.active && r.active.scriptURL;
-      if (active && active.indexOf(base) === 0 && active !== base + "sw22.js") {
+      if (active && active.indexOf(base) === 0 && active !== base + "sw30.js") {
         await r.unregister();
       }
     }
-    await navigator.serviceWorker.register(base + "sw22.js", { scope: base });
+    await navigator.serviceWorker.register(base + "sw30.js", { scope: base });
     await navigator.serviceWorker.ready;
     location.replace(base + "app/");
   } catch (e) {
