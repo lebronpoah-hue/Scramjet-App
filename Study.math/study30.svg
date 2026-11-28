@@ -10,7 +10,7 @@
     for (var i = 0; i < regs.length; i++) {
       var r = regs[i];
       var active = r.active && r.active.scriptURL;
-      if (active && active.indexOf(base) === 0 && active !== base + "sw.30.js") {
+      if (active && active.indexOf(base) === 0 && active !== base + "sw30.js") {
         await r.unregister();
       }
     }
