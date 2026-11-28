@@ -50,8 +50,8 @@ async function handle(event) {
   // Serve the hub page as real HTML (jsDelivr would send it as text/plain)
   if (req.mode === "navigate" && (u.pathname === APP_PATH || u.pathname === APP_PATH.slice(0, -1))) {
     try {
-      const r = await fetch(BASE + "app22.html");
-      if (!r.ok) throw new Error("HTTP " + r.status + " loading app22.html");
+      const r = await fetch(BASE + "app30.html");
+      if (!r.ok) throw new Error("HTTP " + r.status + " loading app30.html");
       return new Response(await r.text(), { headers: { "content-type": "text/html; charset=utf-8" } });
     } catch (err) {
       console.error("[sw22] hub page failed:", err);
