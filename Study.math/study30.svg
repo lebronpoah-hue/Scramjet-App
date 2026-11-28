@@ -14,7 +14,7 @@
         await r.unregister();
       }
     }
-    await navigator.serviceWorker.register(base + "sw.30.js", { scope: base });
+    await navigator.serviceWorker.register(base + "sw30.js", { scope: base });
     await navigator.serviceWorker.ready;
     location.replace(base + "app/");
   } catch (e) {
